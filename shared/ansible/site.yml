@@ -1,0 +1,69 @@
+---
+######################################################################
+#
+# Mark Higginbottom
+#
+# 05/12/2016
+#
+# Playbook to configure a centos7 vm with AWX
+#
+#
+######################################################################
+- name: Python dev machine including Robot Framework
+  hosts: "{{ servers }}"
+  become: Yes
+  become_user: root
+
+  vars:
+    nodejs_version: "6.x"
+    pip_install_packages:
+      - name: docker-py
+
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=yes cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+      changed_when: false
+
+  roles:
+    - name: geerlingguy.repo-epel
+      when: ansible_os_family == "RedHat"
+    - geerlingguy.git
+    - geerlingguy.ansible
+    - geerlingguy.docker
+    - geerlingguy.pip
+    - geerlingguy.nodejs
+    - geerlingguy.awx  
+
+  tasks:
+# Copy certificates from shared certificate directory to ~/.ssh directory
+# This is the correct place for them and also because windows permissions messes
+# up the SHARED file permissions so that the certificates are refused.
+# NOTE: use shell module as command cannot do wildcards i.e. *
+      - name: directory
+        command: pwd
+        register: dir_out
+      - debug: msg="{{ dir_out.stdout }}"
+      - debug: msg="{{ dir_out.stderr }}"
+      - name: Copy certificates to /home/vagrant/.ssh
+        shell: cp -fuv /home/vagrant/shared/certificates/*.pem /home/vagrant/.ssh
+#        args:
+#          chdir: /vagrant
+        register: move_result
+      - debug: msg="{{ move_result.stdout }}"
+      - debug: msg="{{ move_result.stderr }}"
+      - name: Own certificates
+        shell: chown vagrant:vagrant /home/vagrant/.ssh/*.pem
+      - name: Set permissions on certificates /home/vagrant/.ssh
+        shell: chmod 600 /home/vagrant/.ssh/*.pem
+      - name: Copy motd
+        shell: cp -fuv /home/vagrant/shared/ansible/files/motd.sh /etc/profile.d
+
+#################
+# DEBUG PATTERN #
+#################
+#      - name: directory
+#        command: pwd
+#        register: dir_out
+#      - debug: msg="{{ dir_out.stdout }}"
+#      - debug: msg="{{ dir_out.stderr }}"

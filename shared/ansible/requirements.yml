@@ -1,0 +1,8 @@
+# Install a role from the Ansible Galaxy
+- src: geerlingguy.repo-epel #EPEL repo (RedHat OSes only)
+- src: geerlingguy.git #Git
+- src: geerlingguy.ansible #Ansible
+- src: geerlingguy.docker #Docker
+- src: geerlingguy.pip #Python Pip
+- src: geerlingguy.nodejs #Node.js (6.x)
+- src: geerlingguy.awx #AWX

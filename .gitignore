@@ -1,0 +1,9 @@
+/shared/certificates/known_hosts
+/shared/certificates/authorized_keys
+*.pem
+known_hosts
+authorized_keys
+id_rsa
+id_rsa.pub
+/shared/ansible/files/.Xauthority
+.vagrant

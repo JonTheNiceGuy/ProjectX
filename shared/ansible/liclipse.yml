@@ -1,0 +1,41 @@
+---
+- hosts: localhost
+
+  sudo: yes
+  user: ansible
+  gather_facts: no
+
+  tasks:
+
+    - name: Check for Liclipse
+      stat: path=/usr/bin/liclipse
+      register: liclipse
+    - block:
+      - name: Install Java 1.7
+        yum: 
+          name: java-1.7.0-openjdk 
+          state: present
+      - name: install the 'Development tools' package group
+        yum:
+          name: "@Development tools"
+          state: installed   
+      - name: install LiClipse dependencies
+        yum: pkg={{item}} state=latest
+        with_items:
+          - gtk+-devel 
+          - gtk2-devel
+          - xorg-x11-fonts-Type1
+      - name: Fetch Liclipse install file and untar
+        unarchive:
+          src: http://www.mediafire.com/file/t564x49xlfy8s4x/liclipse_3.4.0_linux.gtk.x86_64.tar.gz
+          dest: /usr/lib64
+          remote_src: Yes
+      - name: Link up Liclipse
+        file:
+          src: /usr/lib64/liclipse/LiClipse
+          dest: /usr/bin/liclipse
+          state: link
+      when: liclipse.stat.exists == False
+      rescue:
+      - debug: msg="ERROR - unable to set up Liclipse"
+        

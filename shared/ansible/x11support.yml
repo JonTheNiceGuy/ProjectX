@@ -1,0 +1,31 @@
+---
+- hosts: localhost
+
+  sudo: yes
+  user: ansible
+  gather_facts: no
+
+  tasks:
+
+  - name: install requirements
+    yum: name={{ item }} state=present
+    with_items:
+      - xorg-x11-xauth
+      - xterm
+      - xeyes
+
+  - name: update X11 forwarding in /etc/ssh/sshd_config
+    lineinfile: dest=/etc/ssh/sshd_config
+              regexp="^X11Forwarding yes"
+              line="X11Forwarding yes"
+              state=present
+    notify: Restart sshd
+
+  - name: remote work
+    debug: msg="Now logout of the server and start Xming, then log back in and run xeyes"
+
+
+  handlers:
+    - name: Restart sshd
+      service: name=sshd state=restarted
+

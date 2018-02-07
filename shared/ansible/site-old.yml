@@ -1,0 +1,88 @@
+---
+######################################################################
+#
+# Mark Higginbottom
+#
+# 05/12/2016
+#
+# Playbook to configure a centos7 gui vm with the Robot
+# Framework WebDemo
+#
+# NOTE: This is not the way to write an Ansible Playbook.
+# It is just a quick and dirty script to get up and running quickly.
+#
+######################################################################
+- name: Python dev machine including Robot Framework
+  hosts: "{{ servers }}"
+  become: Yes
+  become_user: root
+  tasks:
+    - debug: "{{ servers }}"
+    - name: install the latest version(s) of Python and its build dependencies
+      yum: pkg={{item}} state=latest
+      with_items:
+        - git
+        - python
+        - python-pip
+        - python-wheel
+        - python-setuptools
+        - python-crypto
+        - python-devel
+        - python-netifaces
+        - net-tools
+        - openssl-devel
+        - libffi-devel
+        - openssh-clients
+        - python-openstackclient
+
+    - name: check python version
+      shell: python --version
+      register: shell_output
+    - debug: var=shell_output.stderr
+    - block:
+      - name: Install Python module dependencies with pip
+        pip:
+          name: pip django virtualenv robotframework robotframework-selenium2library requests cryptography awscli boto boto3 botocore
+
+# Use shade 1.12.1 works with K5. Later version do not  - 06/02/2017.
+      - name: Install Python shade-1.12.1 module with pip
+        pip:
+          name: shade
+          version: 1.12.1
+
+
+      - name: Install OpenStack client with pip
+        pip:
+          name: python-openstackclient
+
+# Copy certificates from shared certificate directory to ~/.ssh directory
+# This is the correct place for them and also because windows permissions messes
+# up the SHARED file permissions so that the certificates are refused.
+# NOTE: use shell module as command cannot do wildcards i.e. *
+      - name: directory
+        command: pwd
+        register: dir_out
+      - debug: msg="{{ dir_out.stdout }}"
+      - debug: msg="{{ dir_out.stderr }}"
+      - name: Copy certificates to /home/vagrant/.ssh
+        shell: cp -fuv /home/vagrant/shared/certificates/*.pem /home/vagrant/.ssh
+#        args:
+#          chdir: /vagrant
+        register: move_result
+      - debug: msg="{{ move_result.stdout }}"
+      - debug: msg="{{ move_result.stderr }}"
+      - name: Own certificates
+        shell: chown vagrant:vagrant /home/vagrant/.ssh/*.pem
+      - name: Set permissions on certificates /home/vagrant/.ssh
+        shell: chmod 600 /home/vagrant/.ssh/*.pem
+      - name: Copy motd
+        shell: cp -fuv /home/vagrant/shared/ansible/files/motd.sh /etc/profile.d
+
+#################
+# DEBUG PATTERN #
+#################
+#      - name: directory
+#        command: pwd
+#        register: dir_out
+#      - debug: msg="{{ dir_out.stdout }}"
+#      - debug: msg="{{ dir_out.stderr }}"

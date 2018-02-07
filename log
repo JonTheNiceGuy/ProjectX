@@ -1,0 +1,1409 @@
+Bringing machine 'projectx' up with 'virtualbox' provider...
+==> projectx: Importing base box 'centos/7'...
+[KProgress: 20%[KProgress: 90%[K==> projectx: Matching MAC address for NAT networking...
+==> projectx: Checking if box 'centos/7' is up to date...
+==> projectx: There was a problem while downloading the metadata for your box
+==> projectx: to check for updates. This is not an error, since it is usually due
+==> projectx: to temporary network problems. This is just a warning. The problem
+==> projectx: encountered was:
+==> projectx: 
+==> projectx: The requested URL returned error: 404 Not Found
+==> projectx: 
+==> projectx: If you want to check for box updates, verify your network connection
+==> projectx: is valid and try again.
+==> projectx: Setting the name of the VM: ProjectX_projectx_1517838663080_42729
+==> projectx: Clearing any previously set network interfaces...
+==> projectx: Preparing network interfaces based on configuration...
+    projectx: Adapter 1: nat
+    projectx: Adapter 2: hostonly
+==> projectx: Forwarding ports...
+    projectx: 22 (guest) => 10122 (host) (adapter 1)
+    projectx: 7272 (guest) => 7272 (host) (adapter 1)
+==> projectx: Running 'pre-boot' VM customizations...
+==> projectx: Booting VM...
+==> projectx: Waiting for machine to boot. This may take a few minutes...
+    projectx: SSH address: 127.0.0.1:10122
+    projectx: SSH username: vagrant
+    projectx: SSH auth method: private key
+==> projectx: Machine booted and ready!
+[projectx] No installation found.
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+ * base: mirrors.clouvider.net
+ * extras: mirror.econdc.com
+ * updates: centos.mirrors.nublue.co.uk
+Package 1:make-3.82-23.el7.x86_64 already installed and latest version
+Package bzip2-1.0.6-13.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package binutils.x86_64 0:2.25.1-32.base.el7_4.1 will be updated
+---> Package binutils.x86_64 0:2.25.1-32.base.el7_4.2 will be an update
+---> Package gcc.x86_64 0:4.8.5-16.el7_4.1 will be installed
+--> Processing Dependency: cpp = 4.8.5-16.el7_4.1 for package: gcc-4.8.5-16.el7_4.1.x86_64
+--> Processing Dependency: glibc-devel >= 2.2.90-12 for package: gcc-4.8.5-16.el7_4.1.x86_64
+--> Processing Dependency: libmpfr.so.4()(64bit) for package: gcc-4.8.5-16.el7_4.1.x86_64
+--> Processing Dependency: libmpc.so.3()(64bit) for package: gcc-4.8.5-16.el7_4.1.x86_64
+---> Package kernel-devel.x86_64 0:3.10.0-693.11.6.el7 will be installed
+---> Package perl.x86_64 4:5.16.3-292.el7 will be installed
+--> Processing Dependency: perl-libs = 4:5.16.3-292.el7 for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl-macros for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl-libs for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Getopt::Long) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Temp) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Running transaction check
+---> Package cpp.x86_64 0:4.8.5-16.el7_4.1 will be installed
+---> Package glibc-devel.x86_64 0:2.17-196.el7_4.2 will be installed
+--> Processing Dependency: glibc-headers = 2.17-196.el7_4.2 for package: glibc-devel-2.17-196.el7_4.2.x86_64
+--> Processing Dependency: glibc-headers for package: glibc-devel-2.17-196.el7_4.2.x86_64
+---> Package libmpc.x86_64 0:1.0.1-3.el7 will be installed
+---> Package mpfr.x86_64 0:3.1.1-4.el7 will be installed
+---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
+---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
+---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
+---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
+---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
+---> Package perl-Getopt-Long.noarch 0:2.40-2.el7 will be installed
+--> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-2.el7.noarch
+--> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-2.el7.noarch
+---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
+---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
+--> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+--> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
+---> Package perl-Socket.x86_64 0:2.010-4.el7 will be installed
+---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
+---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
+---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
+---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
+---> Package perl-libs.x86_64 4:5.16.3-292.el7 will be installed
+---> Package perl-macros.x86_64 4:5.16.3-292.el7 will be installed
+---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
+---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
+--> Running transaction check
+---> Package glibc-headers.x86_64 0:2.17-196.el7_4.2 will be installed
+--> Processing Dependency: kernel-headers >= 2.2.1 for package: glibc-headers-2.17-196.el7_4.2.x86_64
+--> Processing Dependency: kernel-headers for package: glibc-headers-2.17-196.el7_4.2.x86_64
+---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
+---> Package perl-Pod-Escapes.noarch 1:1.04-292.el7 will be installed
+---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
+--> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
+---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
+--> Running transaction check
+---> Package kernel-headers.x86_64 0:3.10.0-693.17.1.el7 will be installed
+---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
+--> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+--> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
+--> Running transaction check
+---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
+---> Package perl-parent.noarch 1:0.225-244.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                   Arch      Version                   Repository  Size
+================================================================================
+Installing:
+ gcc                       x86_64    4.8.5-16.el7_4.1          updates     16 M
+ kernel-devel              x86_64    3.10.0-693.11.6.el7       updates     14 M
+ perl                      x86_64    4:5.16.3-292.el7          base       8.0 M
+Updating:
+ binutils                  x86_64    2.25.1-32.base.el7_4.2    updates    5.4 M
+Installing for dependencies:
+ cpp                       x86_64    4.8.5-16.el7_4.1          updates    5.9 M
+ glibc-devel               x86_64    2.17-196.el7_4.2          updates    1.1 M
+ glibc-headers             x86_64    2.17-196.el7_4.2          updates    676 k
+ kernel-headers            x86_64    3.10.0-693.17.1.el7       updates    6.0 M
+ libmpc                    x86_64    1.0.1-3.el7               base        51 k
+ mpfr                      x86_64    3.1.1-4.el7               base       203 k
+ perl-Carp                 noarch    1.26-244.el7              base        19 k
+ perl-Encode               x86_64    2.51-7.el7                base       1.5 M
+ perl-Exporter             noarch    5.68-3.el7                base        28 k
+ perl-File-Path            noarch    2.09-2.el7                base        26 k
+ perl-File-Temp            noarch    0.23.01-3.el7             base        56 k
+ perl-Filter               x86_64    1.49-3.el7                base        76 k
+ perl-Getopt-Long          noarch    2.40-2.el7                base        56 k
+ perl-HTTP-Tiny            noarch    0.033-3.el7               base        38 k
+ perl-PathTools            x86_64    3.40-5.el7                base        82 k
+ perl-Pod-Escapes          noarch    1:1.04-292.el7            base        51 k
+ perl-Pod-Perldoc          noarch    3.20-4.el7                base        87 k
+ perl-Pod-Simple           noarch    1:3.28-4.el7              base       216 k
+ perl-Pod-Usage            noarch    1.63-3.el7                base        27 k
+ perl-Scalar-List-Utils    x86_64    1.27-248.el7              base        36 k
+ perl-Socket               x86_64    2.010-4.el7               base        49 k
+ perl-Storable             x86_64    2.45-3.el7                base        77 k
+ perl-Text-ParseWords      noarch    3.29-4.el7                base        14 k
+ perl-Time-HiRes           x86_64    4:1.9725-3.el7            base        45 k
+ perl-Time-Local           noarch    1.2300-2.el7              base        24 k
+ perl-constant             noarch    1.27-2.el7                base        19 k
+ perl-libs                 x86_64    4:5.16.3-292.el7          base       688 k
+ perl-macros               x86_64    4:5.16.3-292.el7          base        43 k
+ perl-parent               noarch    1:0.225-244.el7           base        12 k
+ perl-podlators            noarch    2.5.1-3.el7               base       112 k
+ perl-threads              x86_64    1.87-4.el7                base        49 k
+ perl-threads-shared       x86_64    1.43-6.el7                base        39 k
+
+Transaction Summary
+================================================================================
+Install  3 Packages (+32 Dependent packages)
+Upgrade  1 Package
+
+Total download size: 61 M
+Downloading packages:
+Delta RPMs reduced 5.4 M of updates to 3.0 M (44% saved)
+Public key for glibc-headers-2.17-196.el7_4.2.x86_64.rpm is not installed
+warning: /var/cache/yum/x86_64/7/updates/packages/glibc-headers-2.17-196.el7_4.2.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for libmpc-1.0.1-3.el7.x86_64.rpm is not installed
+Finishing delta rebuilds of 1 package(s) (5.4 M)
+/usr/share/locale/bg/LC_MESSAGES/binutils.mo: No such file or directory
+cannot reconstruct rpm from disk files
+Some delta RPMs failed to download or rebuild. Retrying..
+Public key for binutils-2.25.1-32.base.el7_4.2.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              1.1 MB/s |  64 MB  01:00     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-4.1708.el7.centos.x86_64 (@anaconda)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mpfr-3.1.1-4.el7.x86_64                                     1/37 
+  Installing : libmpc-1.0.1-3.el7.x86_64                                   2/37 
+  Installing : cpp-4.8.5-16.el7_4.1.x86_64                                 3/37 
+  Installing : 1:perl-parent-0.225-244.el7.noarch                          4/37 
+  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                           5/37 
+  Installing : perl-podlators-2.5.1-3.el7.noarch                           6/37 
+  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                          7/37 
+  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                      8/37 
+  Installing : 1:perl-Pod-Escapes-1.04-292.el7.noarch                      9/37 
+  Installing : perl-Encode-2.51-7.el7.x86_64                              10/37 
+  Installing : perl-Pod-Usage-1.63-3.el7.noarch                           11/37 
+  Installing : 4:perl-macros-5.16.3-292.el7.x86_64                        12/37 
+  Installing : 4:perl-libs-5.16.3-292.el7.x86_64                          13/37 
+  Installing : perl-Storable-2.45-3.el7.x86_64                            14/37 
+  Installing : perl-Exporter-5.68-3.el7.noarch                            15/37 
+  Installing : perl-constant-1.27-2.el7.noarch                            16/37 
+  Installing : perl-Time-Local-1.2300-2.el7.noarch                        17/37 
+  Installing : perl-Socket-2.010-4.el7.x86_64                             18/37 
+  Installing : perl-Carp-1.26-244.el7.noarch                              19/37 
+  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      20/37 
+  Installing : perl-PathTools-3.40-5.el7.x86_64                           21/37 
+  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 22/37 
+  Installing : perl-File-Temp-0.23.01-3.el7.noarch                        23/37 
+  Installing : perl-File-Path-2.09-2.el7.noarch                           24/37 
+  Installing : perl-threads-shared-1.43-6.el7.x86_64                      25/37 
+  Installing : perl-threads-1.87-4.el7.x86_64                             26/37 
+  Installing : perl-Filter-1.49-3.el7.x86_64                              27/37 
+  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                        28/37 
+  Installing : perl-Getopt-Long-2.40-2.el7.noarch                         29/37 
+  Installing : 4:perl-5.16.3-292.el7.x86_64                               30/37 
+  Updating   : binutils-2.25.1-32.base.el7_4.2.x86_64                     31/37 
+  Installing : kernel-headers-3.10.0-693.17.1.el7.x86_64                  32/37 
+  Installing : glibc-headers-2.17-196.el7_4.2.x86_64                      33/37 
+  Installing : glibc-devel-2.17-196.el7_4.2.x86_64                        34/37 
+  Installing : gcc-4.8.5-16.el7_4.1.x86_64                                35/37 
+  Installing : kernel-devel-3.10.0-693.11.6.el7.x86_64                    36/37 
+  Cleanup    : binutils-2.25.1-32.base.el7_4.1.x86_64                     37/37 
+  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                           1/37 
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                       2/37 
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                             3/37 
+  Verifying  : mpfr-3.1.1-4.el7.x86_64                                     4/37 
+  Verifying  : perl-Exporter-5.68-3.el7.noarch                             5/37 
+  Verifying  : perl-constant-1.27-2.el7.noarch                             6/37 
+  Verifying  : perl-PathTools-3.40-5.el7.x86_64                            7/37 
+  Verifying  : 4:perl-macros-5.16.3-292.el7.x86_64                         8/37 
+  Verifying  : glibc-devel-2.17-196.el7_4.2.x86_64                         9/37 
+  Verifying  : 4:perl-5.16.3-292.el7.x86_64                               10/37 
+  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                        11/37 
+  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                        12/37 
+  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                        13/37 
+  Verifying  : kernel-devel-3.10.0-693.11.6.el7.x86_64                    14/37 
+  Verifying  : 4:perl-libs-5.16.3-292.el7.x86_64                          15/37 
+  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                         16/37 
+  Verifying  : kernel-headers-3.10.0-693.17.1.el7.x86_64                  17/37 
+  Verifying  : glibc-headers-2.17-196.el7_4.2.x86_64                      18/37 
+  Verifying  : perl-Socket-2.010-4.el7.x86_64                             19/37 
+  Verifying  : cpp-4.8.5-16.el7_4.1.x86_64                                20/37 
+  Verifying  : perl-Carp-1.26-244.el7.noarch                              21/37 
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                         22/37 
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      23/37 
+  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 24/37 
+  Verifying  : libmpc-1.0.1-3.el7.x86_64                                  25/37 
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                           26/37 
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                              27/37 
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                          28/37 
+  Verifying  : perl-Getopt-Long-2.40-2.el7.noarch                         29/37 
+  Verifying  : perl-File-Path-2.09-2.el7.noarch                           30/37 
+  Verifying  : perl-threads-1.87-4.el7.x86_64                             31/37 
+  Verifying  : binutils-2.25.1-32.base.el7_4.2.x86_64                     32/37 
+  Verifying  : perl-Filter-1.49-3.el7.x86_64                              33/37 
+  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                     34/37 
+  Verifying  : gcc-4.8.5-16.el7_4.1.x86_64                                35/37 
+  Verifying  : 1:perl-Pod-Escapes-1.04-292.el7.noarch                     36/37 
+  Verifying  : binutils-2.25.1-32.base.el7_4.1.x86_64                     37/37 
+
+Installed:
+  gcc.x86_64 0:4.8.5-16.el7_4.1    kernel-devel.x86_64 0:3.10.0-693.11.6.el7   
+  perl.x86_64 4:5.16.3-292.el7    
+
+Dependency Installed:
+  cpp.x86_64 0:4.8.5-16.el7_4.1                                                 
+  glibc-devel.x86_64 0:2.17-196.el7_4.2                                         
+  glibc-headers.x86_64 0:2.17-196.el7_4.2                                       
+  kernel-headers.x86_64 0:3.10.0-693.17.1.el7                                   
+  libmpc.x86_64 0:1.0.1-3.el7                                                   
+  mpfr.x86_64 0:3.1.1-4.el7                                                     
+  perl-Carp.noarch 0:1.26-244.el7                                               
+  perl-Encode.x86_64 0:2.51-7.el7                                               
+  perl-Exporter.noarch 0:5.68-3.el7                                             
+  perl-File-Path.noarch 0:2.09-2.el7                                            
+  perl-File-Temp.noarch 0:0.23.01-3.el7                                         
+  perl-Filter.x86_64 0:1.49-3.el7                                               
+  perl-Getopt-Long.noarch 0:2.40-2.el7                                          
+  perl-HTTP-Tiny.noarch 0:0.033-3.el7                                           
+  perl-PathTools.x86_64 0:3.40-5.el7                                            
+  perl-Pod-Escapes.noarch 1:1.04-292.el7                                        
+  perl-Pod-Perldoc.noarch 0:3.20-4.el7                                          
+  perl-Pod-Simple.noarch 1:3.28-4.el7                                           
+  perl-Pod-Usage.noarch 0:1.63-3.el7                                            
+  perl-Scalar-List-Utils.x86_64 0:1.27-248.el7                                  
+  perl-Socket.x86_64 0:2.010-4.el7                                              
+  perl-Storable.x86_64 0:2.45-3.el7                                             
+  perl-Text-ParseWords.noarch 0:3.29-4.el7                                      
+  perl-Time-HiRes.x86_64 4:1.9725-3.el7                                         
+  perl-Time-Local.noarch 0:1.2300-2.el7                                         
+  perl-constant.noarch 0:1.27-2.el7                                             
+  perl-libs.x86_64 4:5.16.3-292.el7                                             
+  perl-macros.x86_64 4:5.16.3-292.el7                                           
+  perl-parent.noarch 1:0.225-244.el7                                            
+  perl-podlators.noarch 0:2.5.1-3.el7                                           
+  perl-threads.x86_64 0:1.87-4.el7                                              
+  perl-threads-shared.x86_64 0:1.43-6.el7                                       
+
+Updated:
+  binutils.x86_64 0:2.25.1-32.base.el7_4.2                                      
+
+Complete!
+Copy iso file C:\Program Files\Oracle\VirtualBox\VBoxGuestAdditions.iso into the box /tmp/VBoxGuestAdditions.iso
+Mounting Virtualbox Guest Additions ISO to: /mnt
+mount: /dev/loop0 is write-protected, mounting read-only
+Installing Virtualbox Guest Additions 5.2.6 - guest version is unknown
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 5.2.6 Guest Additions for Linux........
+VirtualBox Guest Additions installer
+Copying additional installer modules ...
+Installing additional modules ...
+VirtualBox Guest Additions: Building the VirtualBox Guest Additions kernel modules.
+VirtualBox Guest Additions: Starting.
+Redirecting to /bin/systemctl start vboxadd.service
+Redirecting to /bin/systemctl start vboxadd-service.service
+Unmounting Virtualbox Guest Additions ISO from: /mnt
+==> projectx: Checking for guest additions in VM...
+==> projectx: Setting hostname...
+==> projectx: Configuring and enabling network interfaces...
+    projectx: SSH address: 127.0.0.1:10122
+    projectx: SSH username: vagrant
+    projectx: SSH auth method: private key
+==> projectx: Rsyncing folder: /cygdrive/g/ProjectX/ => /vagrant
+==> projectx: Mounting shared folders...
+    projectx: /home/vagrant/shared => G:/ProjectX/shared
+==> projectx: Running provisioner: shell...
+    projectx: Running: inline script
+    projectx: total 8
+    projectx: drwxrwxrwx. 1 vagrant vagrant    0 Feb  2 09:52 .
+    projectx: drwx------. 4 vagrant vagrant   88 Feb  5 13:54 ..
+    projectx: drwxrwxrwx. 1 vagrant vagrant 4096 Feb  2 15:23 ansible
+    projectx: drwxrwxrwx. 1 vagrant vagrant 4096 Feb  2 09:52 certificates
+    projectx: drwxrwxrwx. 1 vagrant vagrant    0 Feb  2 09:56 dev
+    projectx: drwxrwxrwx. 1 vagrant vagrant    0 Feb  2 09:52 util
+    projectx: Loaded plugins: fastestmirror
+    projectx: Loading mirror speeds from cached hostfile
+    projectx:  * base: mirrors.clouvider.net
+    projectx:  * extras: mirror.econdc.com
+    projectx:  * updates: centos.mirrors.nublue.co.uk
+    projectx: Resolving Dependencies
+    projectx: --> Running transaction check
+    projectx: ---> Package device-mapper-persistent-data.x86_64 0:0.7.0-0.1.rc6.el7 will be updated
+    projectx: ---> Package device-mapper-persistent-data.x86_64 0:0.7.0-0.1.rc6.el7_4.1 will be an update
+    projectx: ---> Package dhclient.x86_64 12:4.2.5-58.el7.centos will be updated
+    projectx: ---> Package dhclient.x86_64 12:4.2.5-58.el7.centos.1 will be an update
+    projectx: ---> Package dhcp-common.x86_64 12:4.2.5-58.el7.centos will be updated
+    projectx: ---> Package dhcp-common.x86_64 12:4.2.5-58.el7.centos.1 will be an update
+    projectx: ---> Package dhcp-libs.x86_64 12:4.2.5-58.el7.centos will be updated
+    projectx: ---> Package dhcp-libs.x86_64 12:4.2.5-58.el7.centos.1 will be an update
+    projectx: ---> Package initscripts.x86_64 0:9.49.39-1.el7 will be updated
+    projectx: ---> Package initscripts.x86_64 0:9.49.39-1.el7_4.1 will be an update
+    projectx: ---> Package kernel.x86_64 0:3.10.0-693.17.1.el7 will be installed
+    projectx: ---> Package kernel-devel.x86_64 0:3.10.0-693.17.1.el7 will be installed
+    projectx: ---> Package kernel-tools.x86_64 0:3.10.0-693.11.6.el7 will be updated
+    projectx: ---> Package kernel-tools.x86_64 0:3.10.0-693.17.1.el7 will be an update
+    projectx: ---> Package kernel-tools-libs.x86_64 0:3.10.0-693.11.6.el7 will be updated
+    projectx: ---> Package kernel-tools-libs.x86_64 0:3.10.0-693.17.1.el7 will be an update
+    projectx: ---> Package kmod.x86_64 0:20-15.el7_4.6 will be updated
+    projectx: ---> Package kmod.x86_64 0:20-15.el7_4.7 will be an update
+    projectx: ---> Package kmod-libs.x86_64 0:20-15.el7_4.6 will be updated
+    projectx: ---> Package kmod-libs.x86_64 0:20-15.el7_4.7 will be an update
+    projectx: ---> Package kpartx.x86_64 0:0.4.9-111.el7 will be updated
+    projectx: ---> Package kpartx.x86_64 0:0.4.9-111.el7_4.2 will be an update
+    projectx: ---> Package libdb.x86_64 0:5.3.21-20.el7 will be updated
+    projectx: ---> Package libdb.x86_64 0:5.3.21-21.el7_4 will be an update
+    projectx: ---> Package libdb-utils.x86_64 0:5.3.21-20.el7 will be updated
+    projectx: ---> Package libdb-utils.x86_64 0:5.3.21-21.el7_4 will be an update
+    projectx: ---> Package nfs-utils.x86_64 1:1.3.0-0.48.el7_4 will be updated
+    projectx: ---> Package nfs-utils.x86_64 1:1.3.0-0.48.el7_4.1 will be an update
+    projectx: ---> Package python-perf.x86_64 0:3.10.0-693.11.6.el7 will be updated
+    projectx: ---> Package python-perf.x86_64 0:3.10.0-693.17.1.el7 will be an update
+    projectx: ---> Package systemd.x86_64 0:219-42.el7_4.4 will be updated
+    projectx: ---> Package systemd.x86_64 0:219-42.el7_4.7 will be an update
+    projectx: ---> Package systemd-libs.x86_64 0:219-42.el7_4.4 will be updated
+    projectx: ---> Package systemd-libs.x86_64 0:219-42.el7_4.7 will be an update
+    projectx: ---> Package systemd-sysv.x86_64 0:219-42.el7_4.4 will be updated
+    projectx: ---> Package systemd-sysv.x86_64 0:219-42.el7_4.7 will be an update
+    projectx: ---> Package tuned.noarch 0:2.8.0-5.el7 will be updated
+    projectx: ---> Package tuned.noarch 0:2.8.0-5.el7_4.2 will be an update
+    projectx: ---> Package tzdata.noarch 0:2017c-1.el7 will be updated
+    projectx: ---> Package tzdata.noarch 0:2018c-1.el7 will be an update
+    projectx: ---> Package yum.noarch 0:3.4.3-154.el7.centos will be updated
+    projectx: ---> Package yum.noarch 0:3.4.3-154.el7.centos.1 will be an update
+    projectx: --> Finished Dependency Resolution
+    projectx: 
+    projectx: Dependencies Resolved
+    projectx: 
+    projectx: ================================================================================
+    projectx:  Package                       Arch   Version                     Repository
+    projectx:                                                                            Size
+    projectx: ================================================================================
+    projectx: Installing:
+    projectx:  kernel                        x86_64 3.10.0-693.17.1.el7         updates  43 M
+    projectx:  kernel-devel                  x86_64 3.10.0-693.17.1.el7         updates  14 M
+    projectx: Updating:
+    projectx:  device-mapper-persistent-data x86_64 0.7.0-0.1.rc6.el7_4.1       updates 400 k
+    projectx:  dhclient                      x86_64 12:4.2.5-58.el7.centos.1    updates 282 k
+    projectx:  dhcp-common                   x86_64 12:4.2.5-58.el7.centos.1    updates 174 k
+    projectx:  dhcp-libs                     x86_64 12:4.2.5-58.el7.centos.1    updates 130 k
+    projectx:  initscripts                   x86_64 9.49.39-1.el7_4.1           updates 435 k
+    projectx:  kernel-tools                  x86_64 3.10.0-693.17.1.el7         updates 5.1 M
+    projectx:  kernel-tools-libs             x86_64 3.10.0-693.17.1.el7         updates 5.1 M
+    projectx:  kmod                          x86_64 20-15.el7_4.7               updates 121 k
+    projectx:  kmod-libs                     x86_64 20-15.el7_4.7               updates  50 k
+    projectx:  kpartx                        x86_64 0.4.9-111.el7_4.2           updates  73 k
+    projectx:  libdb                         x86_64 5.3.21-21.el7_4             updates 719 k
+    projectx:  libdb-utils                   x86_64 5.3.21-21.el7_4             updates 132 k
+    projectx:  nfs-utils                     x86_64 1:1.3.0-0.48.el7_4.1        updates 398 k
+    projectx:  python-perf                   x86_64 3.10.0-693.17.1.el7         updates 5.1 M
+    projectx:  systemd                       x86_64 219-42.el7_4.7              updates 5.2 M
+    projectx:  systemd-libs                  x86_64 219-42.el7_4.7              updates 376 k
+    projectx:  systemd-sysv                  x86_64 219-42.el7_4.7              updates  71 k
+    projectx:  tuned                         noarch 2.8.0-5.el7_4.2             updates 234 k
+    projectx:  tzdata                        noarch 2018c-1.el7                 updates 479 k
+    projectx:  yum                           noarch 3.4.3-154.el7.centos.1      updates 1.2 M
+    projectx: 
+    projectx: Transaction Summary
+    projectx: ================================================================================
+    projectx: Install   2 Packages
+    projectx: Upgrade  20 Packages
+    projectx: 
+    projectx: Total download size: 83 M
+    projectx: Downloading packages:
+    projectx: Delta RPMs reduced 24 M of updates to 10 M (56% saved)
+    projectx: /usr/share/doc/dhclient-4.2.5/README.dhclient.d: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/doc/dhcp-common-4.2.5/LICENSE: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/doc/initscripts-9.49.39/COPYING: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/doc/libdb-5.3.21/LICENSE: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/doc/kmod-20/COPYING: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/doc/nfs-utils-1.3.0/ChangeLog: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/doc/tuned-2.8.0/AUTHORS: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/doc/yum-3.4.3/AUTHORS: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/doc/tzdata-2017c/README: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: /usr/share/man/man8/udevadm.8.gz: No such file or directory
+    projectx: cannot reconstruct rpm from disk files
+    projectx: Some delta RPMs failed to download or rebuild. Retrying..
+    projectx: --------------------------------------------------------------------------------
+    projectx: Total                                              2.6 MB/s |  79 MB  00:30     
+    projectx: Running transaction check
+    projectx: Running transaction test
+    projectx: Transaction test succeeded
+    projectx: Running transaction
+    projectx:   Updating   : kmod-20-15.el7_4.7.x86_64                                   1/42
+    projectx:  
+    projectx:   Updating   : systemd-libs-219-42.el7_4.7.x86_64                          2/42
+    projectx:  
+    projectx:   Updating   : 12:dhcp-libs-4.2.5-58.el7.centos.1.x86_64                   3/42
+    projectx:  
+    projectx:   Updating   : 12:dhcp-common-4.2.5-58.el7.centos.1.x86_64                 4/42
+    projectx:  
+    projectx:   Updating   : libdb-5.3.21-21.el7_4.x86_64                                5/42
+    projectx:  
+    projectx:   Updating   : python-perf-3.10.0-693.17.1.el7.x86_64                      6/42
+    projectx:  
+    projectx:   Updating   : kernel-tools-libs-3.10.0-693.17.1.el7.x86_64                7/42
+    projectx:  
+    projectx:   Updating   : kmod-libs-20-15.el7_4.7.x86_64                              8/42
+    projectx:  
+    projectx:   Updating   : systemd-219-42.el7_4.7.x86_64                               9/42
+    projectx:  
+    projectx:   Updating   : initscripts-9.49.39-1.el7_4.1.x86_64                       10/42
+    projectx:  
+    projectx:   Updating   : 12:dhclient-4.2.5-58.el7.centos.1.x86_64                   11/42
+    projectx:  
+    projectx:   Installing : kernel-3.10.0-693.17.1.el7.x86_64                          12/42
+    projectx:  
+    projectx:   Updating   : tuned-2.8.0-5.el7_4.2.noarch                               13/42
+    projectx:  
+    projectx:   Updating   : systemd-sysv-219-42.el7_4.7.x86_64                         14/42
+    projectx:  
+    projectx:   Updating   : 1:nfs-utils-1.3.0-0.48.el7_4.1.x86_64                      15/42
+    projectx:  
+    projectx:   Updating   : kernel-tools-3.10.0-693.17.1.el7.x86_64                    16/42
+    projectx:  
+    projectx:   Updating   : libdb-utils-5.3.21-21.el7_4.x86_64                         17/42
+    projectx:  
+    projectx:   Updating   : yum-3.4.3-154.el7.centos.1.noarch                          18/42
+    projectx:  
+    projectx:   Updating   : tzdata-2018c-1.el7.noarch                                  19/42
+    projectx:  
+    projectx:   Updating   : device-mapper-persistent-data-0.7.0-0.1.rc6.el7_4.1.x86_   20/42
+    projectx:  
+    projectx:   Updating   : kpartx-0.4.9-111.el7_4.2.x86_64                            21/42
+    projectx:  
+    projectx:   Installing : kernel-devel-3.10.0-693.17.1.el7.x86_64                    22/42
+    projectx:  
+    projectx:   Cleanup    : 12:dhclient-4.2.5-58.el7.centos.x86_64                     23/42
+    projectx:  
+    projectx:   Cleanup    : tuned-2.8.0-5.el7.noarch                                   24/42
+    projectx:  
+    projectx:   Cleanup    : 12:dhcp-common-4.2.5-58.el7.centos.x86_64                  25/42
+    projectx:  
+    projectx:   Cleanup    : 12:dhcp-libs-4.2.5-58.el7.centos.x86_64                    26/42
+    projectx:  
+    projectx:   Cleanup    : systemd-sysv-219-42.el7_4.4.x86_64                         27/42
+    projectx:  
+    projectx:   Cleanup    : initscripts-9.49.39-1.el7.x86_64                           28/42
+    projectx:  
+    projectx:   Cleanup    : 1:nfs-utils-1.3.0-0.48.el7_4.x86_64                        29/42
+    projectx:  
+    projectx:   Cleanup    : systemd-219-42.el7_4.4.x86_64                              30/42
+    projectx:  
+    projectx:   Cleanup    : kernel-tools-3.10.0-693.11.6.el7.x86_64                    31/42
+    projectx:  
+    projectx:   Cleanup    : libdb-utils-5.3.21-20.el7.x86_64                           32/42
+    projectx:  
+    projectx:   Cleanup    : yum-3.4.3-154.el7.centos.noarch                            33/42
+    projectx:  
+    projectx:   Cleanup    : tzdata-2017c-1.el7.noarch                                  34/42
+    projectx:  
+    projectx:   Cleanup    : libdb-5.3.21-20.el7.x86_64                                 35/42
+    projectx:  
+    projectx:   Cleanup    : kernel-tools-libs-3.10.0-693.11.6.el7.x86_64               36/42
+    projectx:  
+    projectx:   Cleanup    : kmod-20-15.el7_4.6.x86_64                                  37/42
+    projectx:  
+    projectx:   Cleanup    : kmod-libs-20-15.el7_4.6.x86_64                             38/42
+    projectx:  
+    projectx:   Cleanup    : systemd-libs-219-42.el7_4.4.x86_64                         39/42
+    projectx:  
+    projectx:   Cleanup    : python-perf-3.10.0-693.11.6.el7.x86_64                     40/42
+    projectx:  
+    projectx:   Cleanup    : device-mapper-persistent-data-0.7.0-0.1.rc6.el7.x86_64     41/42
+    projectx:  
+    projectx:   Cleanup    : kpartx-0.4.9-111.el7.x86_64                                42/42
+    projectx:  
+    projectx: VirtualBox Guest Additions: Building the VirtualBox Guest Additions kernel modules.
+    projectx: groupadd: group 'vboxadd' already exists
+    projectx:   Verifying  : 12:dhcp-common-4.2.5-58.el7.centos.1.x86_64                 1/42
+    projectx:  
+    projectx:   Verifying  : kmod-20-15.el7_4.7.x86_64                                   2/42
+    projectx:  
+    projectx:   Verifying  : initscripts-9.49.39-1.el7_4.1.x86_64                        3/42
+    projectx:  
+    projectx:   Verifying  : 12:dhcp-libs-4.2.5-58.el7.centos.1.x86_64                   4/42
+    projectx:  
+    projectx:   Verifying  : kmod-libs-20-15.el7_4.7.x86_64                              5/42
+    projectx:  
+    projectx:   Verifying  : libdb-utils-5.3.21-21.el7_4.x86_64                          6/42
+    projectx:  
+    projectx:   Verifying  : 12:dhclient-4.2.5-58.el7.centos.1.x86_64                    7/42
+    projectx:  
+    projectx:   Verifying  : tuned-2.8.0-5.el7_4.2.noarch                                8/42
+    projectx:  
+    projectx:   Verifying  : systemd-sysv-219-42.el7_4.7.x86_64                          9/42
+    projectx:  
+    projectx:   Verifying  : kernel-devel-3.10.0-693.17.1.el7.x86_64                    10/42
+    projectx:  
+    projectx:   Verifying  : kernel-3.10.0-693.17.1.el7.x86_64                          11/42
+    projectx:  
+    projectx:   Verifying  : kpartx-0.4.9-111.el7_4.2.x86_64                            12/42
+    projectx:  
+    projectx:   Verifying  : device-mapper-persistent-data-0.7.0-0.1.rc6.el7_4.1.x86_   13/42
+    projectx:  
+    projectx:   Verifying  : kernel-tools-3.10.0-693.17.1.el7.x86_64                    14/42
+    projectx:  
+    projectx:   Verifying  : kernel-tools-libs-3.10.0-693.17.1.el7.x86_64               15/42
+    projectx:  
+    projectx:   Verifying  : 1:nfs-utils-1.3.0-0.48.el7_4.1.x86_64                      16/42
+    projectx:  
+    projectx:   Verifying  : systemd-libs-219-42.el7_4.7.x86_64                         17/42
+    projectx:  
+    projectx:   Verifying  : python-perf-3.10.0-693.17.1.el7.x86_64                     18/42
+    projectx:  
+    projectx:   Verifying  : tzdata-2018c-1.el7.noarch                                  19/42
+    projectx:  
+    projectx:   Verifying  : systemd-219-42.el7_4.7.x86_64                              20/42
+    projectx:  
+    projectx:   Verifying  : libdb-5.3.21-21.el7_4.x86_64                               21/42
+    projectx:  
+    projectx:   Verifying  : yum-3.4.3-154.el7.centos.1.noarch                          22/42
+    projectx:  
+    projectx:   Verifying  : tuned-2.8.0-5.el7.noarch                                   23/42 
+    projectx:   Verifying  : kernel-tools-libs-3.10.0-693.11.6.el7.x86_64               24/42 
+    projectx:   Verifying  : 12:dhcp-libs-4.2.5-58.el7.centos.x86_64                    25/42 
+    projectx:   Verifying  : python-perf-3.10.0-693.11.6.el7.x86_64                     26/42 
+    projectx:   Verifying  : yum-3.4.3-154.el7.centos.noarch                            27/42 
+    projectx:   Verifying  : 12:dhcp-common-4.2.5-58.el7.centos.x86_64                  28/42 
+    projectx:   Verifying  : initscripts-9.49.39-1.el7.x86_64                           29/42 
+    projectx:   Verifying  : 12:dhclient-4.2.5-58.el7.centos.x86_64                     30/42 
+    projectx:   Verifying  : systemd-libs-219-42.el7_4.4.x86_64                         31/42 
+    projectx:   Verifying  : kmod-20-15.el7_4.6.x86_64                                  32/42 
+    projectx:   Verifying  : systemd-219-42.el7_4.4.x86_64                              33/42 
+    projectx:   Verifying  : libdb-utils-5.3.21-20.el7.x86_64                           34/42 
+    projectx:   Verifying  : kernel-tools-3.10.0-693.11.6.el7.x86_64                    35/42 
+    projectx:   Verifying  : kmod-libs-20-15.el7_4.6.x86_64                             36/42 
+    projectx:   Verifying  : systemd-sysv-219-42.el7_4.4.x86_64                         37/42 
+    projectx:   Verifying  : 1:nfs-utils-1.3.0-0.48.el7_4.x86_64                        38/42 
+    projectx:   Verifying  : device-mapper-persistent-data-0.7.0-0.1.rc6.el7.x86_64     39/42 
+    projectx:   Verifying  : tzdata-2017c-1.el7.noarch                                  40/42
+    projectx:  
+    projectx:   Verifying  : kpartx-0.4.9-111.el7.x86_64                                41/42 
+    projectx:   Verifying  : libdb-5.3.21-20.el7.x86_64                                 42/42
+    projectx:  
+    projectx: 
+    projectx: Installed:
+    projectx:   kernel.x86_64 0:3.10.0-693.17.1.el7 kernel-devel.x86_64 0:3.10.0-693.17.1.el7
+    projectx: 
+    projectx: Updated:
+    projectx:   device-mapper-persistent-data.x86_64 0:0.7.0-0.1.rc6.el7_4.1                  
+    projectx:   dhclient.x86_64 12:4.2.5-58.el7.centos.1                                      
+    projectx:   dhcp-common.x86_64 12:4.2.5-58.el7.centos.1                                   
+    projectx:   dhcp-libs.x86_64 12:4.2.5-58.el7.centos.1                                     
+    projectx:   initscripts.x86_64 0:9.49.39-1.el7_4.1                                        
+    projectx:   kernel-tools.x86_64 0:3.10.0-693.17.1.el7                                     
+    projectx:   kernel-tools-libs.x86_64 0:3.10.0-693.17.1.el7                                
+    projectx:   kmod.x86_64 0:20-15.el7_4.7                                                   
+    projectx:   kmod-libs.x86_64 0:20-15.el7_4.7                                              
+    projectx:   kpartx.x86_64 0:0.4.9-111.el7_4.2                                             
+    projectx:   libdb.x86_64 0:5.3.21-21.el7_4                                                
+    projectx:   libdb-utils.x86_64 0:5.3.21-21.el7_4                                          
+    projectx:   nfs-utils.x86_64 1:1.3.0-0.48.el7_4.1                                         
+    projectx:   python-perf.x86_64 0:3.10.0-693.17.1.el7                                      
+    projectx:   systemd.x86_64 0:219-42.el7_4.7                                               
+    projectx:   systemd-libs.x86_64 0:219-42.el7_4.7                                          
+    projectx:   systemd-sysv.x86_64 0:219-42.el7_4.7                                          
+    projectx:   tuned.noarch 0:2.8.0-5.el7_4.2                                                
+    projectx:   tzdata.noarch 0:2018c-1.el7                                                   
+    projectx:   yum.noarch 0:3.4.3-154.el7.centos.1                                           
+    projectx: 
+    projectx: Complete!
+    projectx: Loaded plugins: fastestmirror
+    projectx: Loading mirror speeds from cached hostfile
+    projectx:  * base: mirrors.clouvider.net
+    projectx:  * extras: mirror.econdc.com
+    projectx:  * updates: centos.mirrors.nublue.co.uk
+    projectx: Resolving Dependencies
+    projectx: --> Running transaction check
+    projectx: ---> Package vim-enhanced.x86_64 2:7.4.160-2.el7 will be installed
+    projectx: --> Processing Dependency: vim-common = 2:7.4.160-2.el7 for package: 2:vim-enhanced-7.4.160-2.el7.x86_64
+    projectx: --> Processing Dependency: libgpm.so.2()(64bit) for package: 2:vim-enhanced-7.4.160-2.el7.x86_64
+    projectx: --> Running transaction check
+    projectx: ---> Package gpm-libs.x86_64 0:1.20.7-5.el7 will be installed
+    projectx: ---> Package vim-common.x86_64 2:7.4.160-2.el7 will be installed
+    projectx: --> Processing Dependency: vim-filesystem for package: 2:vim-common-7.4.160-2.el7.x86_64
+    projectx: --> Running transaction check
+    projectx: ---> Package vim-filesystem.x86_64 2:7.4.160-2.el7 will be installed
+    projectx: --> Finished Dependency Resolution
+    projectx: 
+    projectx: Dependencies Resolved
+    projectx: 
+    projectx: ================================================================================
+    projectx:  Package               Arch          Version                  Repository   Size
+    projectx: ================================================================================
+    projectx: Installing:
+    projectx:  vim-enhanced          x86_64        2:7.4.160-2.el7          base        1.0 M
+    projectx: Installing for dependencies:
+    projectx:  gpm-libs              x86_64        1.20.7-5.el7             base         32 k
+    projectx:  vim-common            x86_64        2:7.4.160-2.el7          base        5.9 M
+    projectx:  vim-filesystem        x86_64        2:7.4.160-2.el7          base        9.8 k
+    projectx: 
+    projectx: Transaction Summary
+    projectx: ================================================================================
+    projectx: Install  1 Package (+3 Dependent packages)
+    projectx: 
+    projectx: Total download size: 7.0 M
+    projectx: Installed size: 23 M
+    projectx: Downloading packages:
+    projectx: --------------------------------------------------------------------------------
+    projectx: Total                                              673 kB/s | 7.0 MB  00:10     
+    projectx: Running transaction check
+    projectx: Running transaction test
+    projectx: Transaction test succeeded
+    projectx: Running transaction
+    projectx:   Installing : gpm-libs-1.20.7-5.el7.x86_64                                 1/4
+    projectx:  
+    projectx:   Installing : 2:vim-filesystem-7.4.160-2.el7.x86_64                        2/4
+    projectx:  
+    projectx:   Installing : 2:vim-common-7.4.160-2.el7.x86_64                            3/4
+    projectx:  
+    projectx:   Installing : 2:vim-enhanced-7.4.160-2.el7.x86_64                          4/4
+    projectx:  
+    projectx:   Verifying  : 2:vim-enhanced-7.4.160-2.el7.x86_64                          1/4
+    projectx:  
+    projectx:   Verifying  : 2:vim-filesystem-7.4.160-2.el7.x86_64                        2/4
+    projectx:  
+    projectx:   Verifying  : gpm-libs-1.20.7-5.el7.x86_64                                 3/4
+    projectx:  
+    projectx:   Verifying  : 2:vim-common-7.4.160-2.el7.x86_64                            4/4
+    projectx:  
+    projectx: 
+    projectx: Installed:
+    projectx:   vim-enhanced.x86_64 2:7.4.160-2.el7                                           
+    projectx: 
+    projectx: Dependency Installed:
+    projectx:   gpm-libs.x86_64 0:1.20.7-5.el7           vim-common.x86_64 2:7.4.160-2.el7   
+    projectx:   vim-filesystem.x86_64 2:7.4.160-2.el7   
+    projectx: 
+    projectx: Complete!
+    projectx: Loaded plugins: fastestmirror
+    projectx: Loading mirror speeds from cached hostfile
+    projectx:  * base: mirrors.clouvider.net
+    projectx:  * extras: mirror.econdc.com
+    projectx:  * updates: centos.mirrors.nublue.co.uk
+    projectx: Resolving Dependencies
+    projectx: --> Running transaction check
+    projectx: ---> Package epel-release.noarch 0:7-9 will be installed
+    projectx: --> Finished Dependency Resolution
+    projectx: 
+    projectx: Dependencies Resolved
+    projectx: 
+    projectx: ================================================================================
+    projectx:  Package                Arch             Version         Repository        Size
+    projectx: ================================================================================
+    projectx: Installing:
+    projectx:  epel-release           noarch           7-9             extras            14 k
+    projectx: 
+    projectx: Transaction Summary
+    projectx: ================================================================================
+    projectx: Install  1 Package
+    projectx: 
+    projectx: Total download size: 14 k
+    projectx: Installed size: 24 k
+    projectx: Downloading packages:
+    projectx: Running transaction check
+    projectx: Running transaction test
+    projectx: Transaction test succeeded
+    projectx: Running transaction
+    projectx:   Installing : epel-release-7-9.noarch                                      1/1
+    projectx:  
+    projectx:   Verifying  : epel-release-7-9.noarch                                      1/1
+    projectx:  
+    projectx: 
+    projectx: Installed:
+    projectx:   epel-release.noarch 0:7-9                                                     
+    projectx: 
+    projectx: Complete!
+    projectx: Loaded plugins: fastestmirror
+    projectx: Loading mirror speeds from cached hostfile
+    projectx:  * base: mirrors.clouvider.net
+    projectx:  * epel: mirror.sax.uk.as61049.net
+    projectx:  * extras: mirror.econdc.com
+    projectx:  * updates: centos.mirrors.nublue.co.uk
+    projectx: Resolving Dependencies
+    projectx: --> Running transaction check
+    projectx: ---> Package ansible.noarch 0:2.4.2.0-2.el7 will be installed
+    projectx: --> Processing Dependency: sshpass for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: python2-jmespath for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: python-six for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: python-setuptools for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: python-passlib for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: python-paramiko for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: python-jinja2 for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: python-httplib2 for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: python-cryptography for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Processing Dependency: PyYAML for package: ansible-2.4.2.0-2.el7.noarch
+    projectx: --> Running transaction check
+    projectx: ---> Package PyYAML.x86_64 0:3.10-11.el7 will be installed
+    projectx: --> Processing Dependency: libyaml-0.so.2()(64bit) for package: PyYAML-3.10-11.el7.x86_64
+    projectx: ---> Package python-httplib2.noarch 0:0.9.2-1.el7 will be installed
+    projectx: ---> Package python-jinja2.noarch 0:2.7.2-2.el7 will be installed
+    projectx: --> Processing Dependency: python-babel >= 0.8 for package: python-jinja2-2.7.2-2.el7.noarch
+    projectx: --> Processing Dependency: python-markupsafe for package: python-jinja2-2.7.2-2.el7.noarch
+    projectx: ---> Package python-paramiko.noarch 0:2.1.1-2.el7 will be installed
+    projectx: ---> Package python-passlib.noarch 0:1.6.5-2.el7 will be installed
+    projectx: ---> Package python-setuptools.noarch 0:0.9.8-7.el7 will be installed
+    projectx: --> Processing Dependency: python-backports-ssl_match_hostname for package: python-setuptools-0.9.8-7.el7.noarch
+    projectx: ---> Package python-six.noarch 0:1.9.0-2.el7 will be installed
+    projectx: ---> Package python2-cryptography.x86_64 0:1.7.2-1.el7_4.1 will be installed
+    projectx: --> Processing Dependency: python-pyasn1 >= 0.1.8 for package: python2-cryptography-1.7.2-1.el7_4.1.x86_64
+    projectx: --> Processing Dependency: python-idna >= 2.0 for package: python2-cryptography-1.7.2-1.el7_4.1.x86_64
+    projectx: --> Processing Dependency: python-cffi >= 1.4.1 for package: python2-cryptography-1.7.2-1.el7_4.1.x86_64
+    projectx: --> Processing Dependency: python-ipaddress for package: python2-cryptography-1.7.2-1.el7_4.1.x86_64
+    projectx: --> Processing Dependency: python-enum34 for package: python2-cryptography-1.7.2-1.el7_4.1.x86_64
+    projectx: ---> Package python2-jmespath.noarch 0:0.9.0-3.el7 will be installed
+    projectx: ---> Package sshpass.x86_64 0:1.06-2.el7 will be installed
+    projectx: --> Running transaction check
+    projectx: ---> Package libyaml.x86_64 0:0.1.4-11.el7_0 will be installed
+    projectx: ---> Package python-babel.noarch 0:0.9.6-8.el7 will be installed
+    projectx: ---> Package python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7 will be installed
+    projectx: --> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch
+    projectx: ---> Package python-cffi.x86_64 0:1.6.0-5.el7 will be installed
+    projectx: --> Processing Dependency: python-pycparser for package: python-cffi-1.6.0-5.el7.x86_64
+    projectx: ---> Package python-enum34.noarch 0:1.0.4-1.el7 will be installed
+    projectx: ---> Package python-idna.noarch 0:2.4-1.el7 will be installed
+    projectx: ---> Package python-ipaddress.noarch 0:1.0.16-2.el7 will be installed
+    projectx: ---> Package python-markupsafe.x86_64 0:0.11-10.el7 will be installed
+    projectx: ---> Package python2-pyasn1.noarch 0:0.1.9-7.el7 will be installed
+    projectx: --> Running transaction check
+    projectx: ---> Package python-backports.x86_64 0:1.0-8.el7 will be installed
+    projectx: ---> Package python-pycparser.noarch 0:2.14-1.el7 will be installed
+    projectx: --> Processing Dependency: python-ply for package: python-pycparser-2.14-1.el7.noarch
+    projectx: --> Running transaction check
+    projectx: ---> Package python-ply.noarch 0:3.4-11.el7 will be installed
+    projectx: --> Finished Dependency Resolution
+    projectx: 
+    projectx: Dependencies Resolved
+    projectx: 
+    projectx: ================================================================================
+    projectx:  Package                              Arch    Version            Repository
+    projectx:                                                                            Size
+    projectx: ================================================================================
+    projectx: Installing:
+    projectx:  ansible                              noarch  2.4.2.0-2.el7      extras   7.6 M
+    projectx: Installing for dependencies:
+    projectx:  PyYAML                               x86_64  3.10-11.el7        base     153 k
+    projectx:  libyaml                              x86_64  0.1.4-11.el7_0     base      55 k
+    projectx:  python-babel                         noarch  0.9.6-8.el7        base     1.4 M
+    projectx:  python-backports                     x86_64  1.0-8.el7          base     5.8 k
+    projectx:  python-backports-ssl_match_hostname  noarch  3.4.0.2-4.el7      base      12 k
+    projectx:  python-cffi                          x86_64  1.6.0-5.el7        base     218 k
+    projectx:  python-enum34                        noarch  1.0.4-1.el7        base      52 k
+    projectx:  python-httplib2                      noarch  0.9.2-1.el7        extras   115 k
+    projectx:  python-idna                          noarch  2.4-1.el7          base      94 k
+    projectx:  python-ipaddress                     noarch  1.0.16-2.el7       base      34 k
+    projectx:  python-jinja2                        noarch  2.7.2-2.el7        base     515 k
+    projectx:  python-markupsafe                    x86_64  0.11-10.el7        base      25 k
+    projectx:  python-paramiko                      noarch  2.1.1-2.el7        extras   267 k
+    projectx:  python-passlib                       noarch  1.6.5-2.el7        extras   488 k
+    projectx:  python-ply                           noarch  3.4-11.el7         base     123 k
+    projectx:  python-pycparser                     noarch  2.14-1.el7         base     104 k
+    projectx:  python-setuptools                    noarch  0.9.8-7.el7        base     397 k
+    projectx:  python-six                           noarch  1.9.0-2.el7        base      29 k
+    projectx:  python2-cryptography                 x86_64  1.7.2-1.el7_4.1    updates  502 k
+    projectx:  python2-jmespath                     noarch  0.9.0-3.el7        extras    39 k
+    projectx:  python2-pyasn1                       noarch  0.1.9-7.el7        base     100 k
+    projectx:  sshpass                              x86_64  1.06-2.el7         extras    21 k
+    projectx: 
+    projectx: Transaction Summary
+    projectx: ================================================================================
+    projectx: Install  1 Package (+22 Dependent packages)
+    projectx: 
+    projectx: Total download size: 12 M
+    projectx: Installed size: 60 M
+    projectx: Downloading packages:
+    projectx: --------------------------------------------------------------------------------
+    projectx: Total                                              2.8 MB/s |  12 MB  00:04     
+    projectx: Running transaction check
+    projectx: Running transaction test
+    projectx: Transaction test succeeded
+    projectx: Running transaction
+    projectx:   Installing : python-six-1.9.0-2.el7.noarch                               1/23
+    projectx:  
+    projectx:   Installing : python2-pyasn1-0.1.9-7.el7.noarch                           2/23
+    projectx:  
+    projectx:   Installing : python-httplib2-0.9.2-1.el7.noarch                          3/23
+    projectx:  
+    projectx:   Installing : python-enum34-1.0.4-1.el7.noarch                            4/23
+    projectx:  
+    projectx:   Installing : python-ipaddress-1.0.16-2.el7.noarch                        5/23
+    projectx:  
+    projectx:   Installing : libyaml-0.1.4-11.el7_0.x86_64                               6/23
+    projectx:  
+    projectx:   Installing : PyYAML-3.10-11.el7.x86_64                                   7/23
+    projectx:  
+    projectx:   Installing : python-backports-1.0-8.el7.x86_64                           8/23
+    projectx:  
+    projectx:   Installing : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch    9/23
+    projectx:  
+    projectx:   Installing : python-setuptools-0.9.8-7.el7.noarch                       10/23
+    projectx:  
+    projectx:   Installing : python-babel-0.9.6-8.el7.noarch                            11/23
+    projectx:  
+    projectx:   Installing : python-passlib-1.6.5-2.el7.noarch                          12/23
+    projectx:  
+    projectx:   Installing : python-ply-3.4-11.el7.noarch                               13/23
+    projectx:  
+    projectx:   Installing : python-pycparser-2.14-1.el7.noarch                         14/23
+    projectx:  
+    projectx:   Installing : python-cffi-1.6.0-5.el7.x86_64                             15/23
+    projectx:  
+    projectx:   Installing : python-markupsafe-0.11-10.el7.x86_64                       16/23
+    projectx:  
+    projectx:   Installing : python-jinja2-2.7.2-2.el7.noarch                           17/23
+    projectx:  
+    projectx:   Installing : python-idna-2.4-1.el7.noarch                               18/23
+    projectx:  
+    projectx:   Installing : python2-cryptography-1.7.2-1.el7_4.1.x86_64                19/23
+    projectx:  
+    projectx:   Installing : python-paramiko-2.1.1-2.el7.noarch                         20/23
+    projectx:  
+    projectx:   Installing : python2-jmespath-0.9.0-3.el7.noarch                        21/23
+    projectx:  
+    projectx:   Installing : sshpass-1.06-2.el7.x86_64                                  22/23
+    projectx:  
+    projectx:   Installing : ansible-2.4.2.0-2.el7.noarch                               23/23
+    projectx:  
+    projectx:   Verifying  : python-jinja2-2.7.2-2.el7.noarch                            1/23
+    projectx:  
+    projectx:   Verifying  : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch    2/23
+    projectx:  
+    projectx:   Verifying  : sshpass-1.06-2.el7.x86_64                                   3/23
+    projectx:  
+    projectx:   Verifying  : python-setuptools-0.9.8-7.el7.noarch                        4/23
+    projectx:  
+    projectx:   Verifying  : python2-cryptography-1.7.2-1.el7_4.1.x86_64                 5/23
+    projectx:  
+    projectx:   Verifying  : python2-jmespath-0.9.0-3.el7.noarch                         6/23
+    projectx:  
+    projectx:   Verifying  : python-six-1.9.0-2.el7.noarch                               7/23
+    projectx:  
+    projectx:   Verifying  : python-idna-2.4-1.el7.noarch                                8/23
+    projectx:  
+    projectx:   Verifying  : python-markupsafe-0.11-10.el7.x86_64                        9/23
+    projectx:  
+    projectx:   Verifying  : python-ply-3.4-11.el7.noarch                               10/23
+    projectx:  
+    projectx:   Verifying  : python-passlib-1.6.5-2.el7.noarch                          11/23
+    projectx:  
+    projectx:   Verifying  : python-babel-0.9.6-8.el7.noarch                            12/23
+    projectx:  
+    projectx:   Verifying  : python-backports-1.0-8.el7.x86_64                          13/23
+    projectx:  
+    projectx:   Verifying  : python-cffi-1.6.0-5.el7.x86_64                             14/23
+    projectx:  
+    projectx:   Verifying  : python-paramiko-2.1.1-2.el7.noarch                         15/23
+    projectx:  
+    projectx:   Verifying  : python-pycparser-2.14-1.el7.noarch                         16/23
+    projectx:  
+    projectx:   Verifying  : libyaml-0.1.4-11.el7_0.x86_64                              17/23
+    projectx:  
+    projectx:   Verifying  : ansible-2.4.2.0-2.el7.noarch                               18/23
+    projectx:  
+    projectx:   Verifying  : python-ipaddress-1.0.16-2.el7.noarch                       19/23
+    projectx:  
+    projectx:   Verifying  : python-enum34-1.0.4-1.el7.noarch                           20/23
+    projectx:  
+    projectx:   Verifying  : python-httplib2-0.9.2-1.el7.noarch                         21/23
+    projectx:  
+    projectx:   Verifying  : python2-pyasn1-0.1.9-7.el7.noarch                          22/23
+    projectx:  
+    projectx:   Verifying  : PyYAML-3.10-11.el7.x86_64                                  23/23
+    projectx:  
+    projectx: 
+    projectx: Installed:
+    projectx:   ansible.noarch 0:2.4.2.0-2.el7                                                
+    projectx: 
+    projectx: Dependency Installed:
+    projectx:   PyYAML.x86_64 0:3.10-11.el7                                                   
+    projectx:   libyaml.x86_64 0:0.1.4-11.el7_0                                               
+    projectx:   python-babel.noarch 0:0.9.6-8.el7                                             
+    projectx:   python-backports.x86_64 0:1.0-8.el7                                           
+    projectx:   python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7                    
+    projectx:   python-cffi.x86_64 0:1.6.0-5.el7                                              
+    projectx:   python-enum34.noarch 0:1.0.4-1.el7                                            
+    projectx:   python-httplib2.noarch 0:0.9.2-1.el7                                          
+    projectx:   python-idna.noarch 0:2.4-1.el7                                                
+    projectx:   python-ipaddress.noarch 0:1.0.16-2.el7                                        
+    projectx:   python-jinja2.noarch 0:2.7.2-2.el7                                            
+    projectx:   python-markupsafe.x86_64 0:0.11-10.el7                                        
+    projectx:   python-paramiko.noarch 0:2.1.1-2.el7                                          
+    projectx:   python-passlib.noarch 0:1.6.5-2.el7                                           
+    projectx:   python-ply.noarch 0:3.4-11.el7                                                
+    projectx:   python-pycparser.noarch 0:2.14-1.el7                                          
+    projectx:   python-setuptools.noarch 0:0.9.8-7.el7                                        
+    projectx:   python-six.noarch 0:1.9.0-2.el7                                               
+    projectx:   python2-cryptography.x86_64 0:1.7.2-1.el7_4.1                                 
+    projectx:   python2-jmespath.noarch 0:0.9.0-3.el7                                         
+    projectx:   python2-pyasn1.noarch 0:0.1.9-7.el7                                           
+    projectx:   sshpass.x86_64 0:1.06-2.el7                                                   
+    projectx: 
+    projectx: Complete!
+    projectx: Loaded plugins: fastestmirror
+    projectx: Loading mirror speeds from cached hostfile
+    projectx:  * base: mirrors.clouvider.net
+    projectx:  * epel: mirror.serverbeheren.nl
+    projectx:  * extras: mirror.econdc.com
+    projectx:  * updates: centos.mirrors.nublue.co.uk
+    projectx: Package yum-utils-1.1.31-42.el7.noarch already installed and latest version
+    projectx: Nothing to do
+    projectx: Loaded plugins: fastestmirror
+    projectx: Loading mirror speeds from cached hostfile
+    projectx:  * base: mirrors.clouvider.net
+    projectx:  * epel: mirror.1000mbps.com
+    projectx:  * extras: mirror.econdc.com
+    projectx:  * updates: centos.mirrors.nublue.co.uk
+    projectx: Resolving Dependencies
+    projectx: --> Running transaction check
+    projectx: ---> Package git.x86_64 0:1.8.3.1-12.el7_4 will be installed
+    projectx: --> Processing Dependency: perl-Git = 1.8.3.1-12.el7_4 for package: git-1.8.3.1-12.el7_4.x86_64
+    projectx: --> Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-12.el7_4.x86_64
+    projectx: --> Processing Dependency: perl(Git) for package: git-1.8.3.1-12.el7_4.x86_64
+    projectx: --> Processing Dependency: perl(Error) for package: git-1.8.3.1-12.el7_4.x86_64
+    projectx: --> Processing Dependency: libgnome-keyring.so.0()(64bit) for package: git-1.8.3.1-12.el7_4.x86_64
+    projectx: --> Running transaction check
+    projectx: ---> Package libgnome-keyring.x86_64 0:3.12.0-1.el7 will be installed
+    projectx: ---> Package perl-Error.noarch 1:0.17020-2.el7 will be installed
+    projectx: ---> Package perl-Git.noarch 0:1.8.3.1-12.el7_4 will be installed
+    projectx: ---> Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed
+    projectx: --> Finished Dependency Resolution
+    projectx: 
+    projectx: Dependencies Resolved
+    projectx: 
+    projectx: ================================================================================
+    projectx:  Package                Arch         Version                Repository     Size
+    projectx: ================================================================================
+    projectx: Installing:
+    projectx:  git                    x86_64       1.8.3.1-12.el7_4       updates       4.4 M
+    projectx: Installing for dependencies:
+    projectx:  libgnome-keyring       x86_64       3.12.0-1.el7           base          109 k
+    projectx:  perl-Error             noarch       1:0.17020-2.el7        base           32 k
+    projectx:  perl-Git               noarch       1.8.3.1-12.el7_4       updates        53 k
+    projectx:  perl-TermReadKey       x86_64       2.30-20.el7            base           31 k
+    projectx: 
+    projectx: Transaction Summary
+    projectx: ================================================================================
+    projectx: Install  1 Package (+4 Dependent packages)
+    projectx: 
+    projectx: Total download size: 4.6 M
+    projectx: Installed size: 23 M
+    projectx: Downloading packages:
+    projectx: --------------------------------------------------------------------------------
+    projectx: Total                                              2.0 MB/s | 4.6 MB  00:02     
+    projectx: Running transaction check
+    projectx: Running transaction test
+    projectx: Transaction test succeeded
+    projectx: Running transaction
+    projectx:   Installing : 1:perl-Error-0.17020-2.el7.noarch                            1/5
+    projectx:  
+    projectx:   Installing : perl-TermReadKey-2.30-20.el7.x86_64                          2/5
+    projectx:  
+    projectx:   Installing : libgnome-keyring-3.12.0-1.el7.x86_64                         3/5
+    projectx:  
+    projectx:   Installing : perl-Git-1.8.3.1-12.el7_4.noarch                             4/5
+    projectx:  
+    projectx:   Installing : git-1.8.3.1-12.el7_4.x86_64                                  5/5
+    projectx:  
+    projectx:   Verifying  : git-1.8.3.1-12.el7_4.x86_64                                  1/5
+    projectx:  
+    projectx:   Verifying  : 1:perl-Error-0.17020-2.el7.noarch                            2/5
+    projectx:  
+    projectx:   Verifying  : libgnome-keyring-3.12.0-1.el7.x86_64                         3/5
+    projectx:  
+    projectx:   Verifying  : perl-Git-1.8.3.1-12.el7_4.noarch                             4/5
+    projectx:  
+    projectx:   Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                          5/5
+    projectx:  
+    projectx: 
+    projectx: Installed:
+    projectx:   git.x86_64 0:1.8.3.1-12.el7_4                                                 
+    projectx: 
+    projectx: Dependency Installed:
+    projectx:   libgnome-keyring.x86_64 0:3.12.0-1.el7  perl-Error.noarch 1:0.17020-2.el7     
+    projectx:   perl-Git.noarch 0:1.8.3.1-12.el7_4      perl-TermReadKey.x86_64 0:2.30-20.el7 
+    projectx: 
+    projectx: Complete!
+==> projectx: Running provisioner: info (shell)...
+    projectx: Running: C:/Users/HIGGIN~1/AppData/Local/Temp/vagrant-shell20180205-2712-1dxce44.sh
+    projectx: Environment information....
+    projectx: \S
+    projectx: Kernel \r on an \m
+    projectx: CentOS Linux release 7.4.1708 (Core) 
+    projectx: NAME="CentOS Linux"
+    projectx: VERSION="7 (Core)"
+    projectx: ID="centos"
+    projectx: ID_LIKE="rhel fedora"
+    projectx: VERSION_ID="7"
+    projectx: PRETTY_NAME="CentOS Linux 7 (Core)"
+    projectx: ANSI_COLOR="0;31"
+    projectx: CPE_NAME="cpe:/o:centos:centos:7"
+    projectx: HOME_URL="https://www.centos.org/"
+    projectx: BUG_REPORT_URL="https://bugs.centos.org/"
+    projectx: 
+    projectx: CENTOS_MANTISBT_PROJECT="CentOS-7"
+    projectx: CENTOS_MANTISBT_PROJECT_VERSION="7"
+    projectx: REDHAT_SUPPORT_PRODUCT="centos"
+    projectx: REDHAT_SUPPORT_PRODUCT_VERSION="7"
+    projectx: 
+    projectx: CentOS Linux release 7.4.1708 (Core) 
+    projectx: CentOS Linux release 7.4.1708 (Core) 
+    projectx: Linux projectx 3.10.0-693.11.6.el7.x86_64 #1 SMP Thu Jan 4 01:06:37 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+    projectx:               total        used        free      shared  buff/cache   available
+    projectx: Mem:           1.8G        118M        614M        8.4M        1.1G        1.4G
+    projectx: Swap:          1.5G          0B        1.5G
+    projectx: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1
+    projectx:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    projectx:     inet 127.0.0.1/8 scope host lo
+    projectx:        valid_lft forever preferred_lft forever
+    projectx:     inet6 ::1/128 scope host 
+    projectx:        valid_lft forever preferred_lft forever
+    projectx: 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    projectx:     link/ether 52:54:00:ad:3b:43 brd ff:ff:ff:ff:ff:ff
+    projectx:     inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+    projectx:        valid_lft 86225sec preferred_lft 86225sec
+    projectx:     inet6 fe80::5054:ff:fead:3b43/64 scope link 
+    projectx:        valid_lft forever preferred_lft forever
+    projectx: 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    projectx:     link/ether 08:00:27:66:97:82 brd ff:ff:ff:ff:ff:ff
+    projectx:     inet 192.168.100.101/24 brd 192.168.100.255 scope global eth1
+    projectx:        valid_lft forever preferred_lft forever
+    projectx:     inet6 fe80::a00:27ff:fe66:9782/64 scope link 
+    projectx:        valid_lft forever preferred_lft forever
+    projectx: total 12
+    projectx: drwx------. 4 vagrant vagrant  88 Feb  5 13:54 .
+    projectx: drwxr-xr-x. 3 root    root     21 Jan 23 10:54 ..
+    projectx: -rw-r--r--. 1 vagrant vagrant  18 Sep  6 16:25 .bash_logout
+    projectx: -rw-r--r--. 1 vagrant vagrant 193 Sep  6 16:25 .bash_profile
+    projectx: -rw-r--r--. 1 vagrant vagrant 231 Sep  6 16:25 .bashrc
+    projectx: drwxrwxrwx. 1 vagrant vagrant   0 Feb  2 09:52 shared
+    projectx: drwx------. 2 vagrant vagrant  29 Jan 23 10:55 .ssh
+==> projectx: Running provisioner: ansible_local...
+Vagrant has automatically selected the compatibility mode '2.0'
+according to the Ansible version installed (2.4.2.0).
+
+Alternatively, the compatibility mode can be specified in your Vagrantfile:
+https://www.vagrantup.com/docs/provisioning/ansible_common.html#compatibility_mode
+    projectx: Running ansible-galaxy...
+cd /vagrant && ansible-galaxy install --role-file='/vagrant/shared/ansible/requirements.yml' --roles-path='/vagrant/shared/ansible/roles' --force
+- downloading role 'repo-epel', owned by geerlingguy
+- downloading role from https://github.com/geerlingguy/ansible-role-repo-epel/archive/1.2.2.tar.gz
+- extracting geerlingguy.repo-epel to /vagrant/shared/ansible/roles/geerlingguy.repo-epel
+- geerlingguy.repo-epel (1.2.2) was installed successfully
+- downloading role 'git', owned by geerlingguy
+- downloading role from https://github.com/geerlingguy/ansible-role-git/archive/1.4.0.tar.gz
+- extracting geerlingguy.git to /vagrant/shared/ansible/roles/geerlingguy.git
+- geerlingguy.git (1.4.0) was installed successfully
+- downloading role 'ansible', owned by geerlingguy
+- downloading role from https://github.com/geerlingguy/ansible-role-ansible/archive/1.2.0.tar.gz
+- extracting geerlingguy.ansible to /vagrant/shared/ansible/roles/geerlingguy.ansible
+- geerlingguy.ansible (1.2.0) was installed successfully
+- downloading role 'docker', owned by geerlingguy
+- downloading role from https://github.com/geerlingguy/ansible-role-docker/archive/2.1.0.tar.gz
+- extracting geerlingguy.docker to /vagrant/shared/ansible/roles/geerlingguy.docker
+- geerlingguy.docker (2.1.0) was installed successfully
+- downloading role 'pip', owned by geerlingguy
+- downloading role from https://github.com/geerlingguy/ansible-role-pip/archive/1.2.0.tar.gz
+- extracting geerlingguy.pip to /vagrant/shared/ansible/roles/geerlingguy.pip
+- geerlingguy.pip (1.2.0) was installed successfully
+- downloading role 'nodejs', owned by geerlingguy
+- downloading role from https://github.com/geerlingguy/ansible-role-nodejs/archive/4.1.2.tar.gz
+- extracting geerlingguy.nodejs to /vagrant/shared/ansible/roles/geerlingguy.nodejs
+- geerlingguy.nodejs (4.1.2) was installed successfully
+- downloading role 'awx', owned by geerlingguy
+- downloading role from https://github.com/geerlingguy/ansible-role-awx/archive/1.1.0.tar.gz
+- extracting geerlingguy.awx to /vagrant/shared/ansible/roles/geerlingguy.awx
+- geerlingguy.awx (1.1.0) was installed successfully
+    projectx: Running ansible-playbook...
+cd /vagrant && PYTHONUNBUFFERED=1 ANSIBLE_NOCOLOR=true ansible-playbook --limit="projectx" --inventory-file=/tmp/vagrant-ansible/inventory --extra-vars=\{\"servers\":\"projectx\"\} -v shared/ansible/site.yml
+Using /etc/ansible/ansible.cfg as config file
+[DEPRECATION WARNING]: The use of 'include' for tasks has been deprecated. Use 
+'import_tasks' for static inclusions or 'include_tasks' for dynamic inclusions.
+ This feature will be removed in a future release. Deprecation warnings can be 
+disabled by setting deprecation_warnings=False in ansible.cfg.
+[DEPRECATION WARNING]: include is kept for backwards compatibility but usage is
+ discouraged. The module documentation details page may explain more about this
+ rationale.. This feature will be removed in a future release. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+
+PLAY [Python dev machine including Robot Framework] ****************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [projectx]
+
+TASK [Update apt cache.] *******************************************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.repo-epel : Check if EPEL repo is already configured.] *******
+ok: [projectx] => {"changed": false, "stat": {"atime": 1517839005.0219948, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 8, "charset": "us-ascii", "checksum": "7abc765aa6f79dcd782468a67e391b7581655393", "ctime": 1517839004.7539537, "dev": 64768, "device_type": 0, "executable": false, "exists": true, "gid": 0, "gr_name": "root", "inode": 403728, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "0e11de98b7a88777bfb6810a6bbb6ad4", "mimetype": "text/plain", "mode": "0644", "mtime": 1482860264.0, "nlink": 1, "path": "/etc/yum.repos.d/epel.repo", "pw_name": "root", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 957, "uid": 0, "version": "18446744073230847844", "wgrp": false, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+
+TASK [geerlingguy.repo-epel : Install EPEL repo.] ******************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.repo-epel : Import EPEL GPG key.] ****************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Ensure git is installed (RedHat).] *********************
+ok: [projectx] => (item=git) => {"changed": false, "item": "git", "msg": "", "rc": 0, "results": ["git-1.8.3.1-12.el7_4.x86_64 providing git is already installed"]}
+changed: [projectx] => (item=git-svn) => {"changed": true, "item": "git-svn", "msg": "", "rc": 0, "results": ["Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: mirrors.clouvider.net\n * epel: mirror.ehv.weppel.nl\n * extras: mirror.econdc.com\n * updates: centos.mirrors.nublue.co.uk\nResolving Dependencies\n--> Running transaction check\n---> Package git-svn.x86_64 0:1.8.3.1-12.el7_4 will be installed\n--> Processing Dependency: subversion for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Git::SVN::Utils) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Git::SVN::Ra) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Git::SVN::Prompt) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Git::SVN::Migration) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Git::SVN::Log) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Git::SVN::Fetcher) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Git::SVN::Editor) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Git::SVN) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Processing Dependency: perl(Digest::MD5) for package: git-svn-1.8.3.1-12.el7_4.x86_64\n--> Running transaction check\n---> Package perl-Digest-MD5.x86_64 0:2.52-3.el7 will be installed\n--> Processing Dependency: perl(Digest::base) >= 1.00 for package: perl-Digest-MD5-2.52-3.el7.x86_64\n---> Package perl-Git-SVN.noarch 0:1.8.3.1-12.el7_4 will be installed\n--> Processing Dependency: perl(YAML::Any) for package: perl-Git-SVN-1.8.3.1-12.el7_4.noarch\n--> Processing Dependency: perl(SVN::Ra) for package: perl-Git-SVN-1.8.3.1-12.el7_4.noarch\n--> Processing Dependency: perl(SVN::Delta) for package: perl-Git-SVN-1.8.3.1-12.el7_4.noarch\n--> Processing Dependency: perl(SVN::Core) for package: perl-Git-SVN-1.8.3.1-12.el7_4.noarch\n--> Processing Dependency: perl(SVN::Client) for package: perl-Git-SVN-1.8.3.1-12.el7_4.noarch\n---> Package subversion.x86_64 0:1.7.14-11.el7_4 will be installed\n--> Processing Dependency: subversion-libs(x86-64) = 1.7.14-11.el7_4 for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_wc-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_subr-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_repos-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_ra_svn-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_ra_neon-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_ra_local-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_ra-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_fs_util-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_fs_fs-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_fs_base-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_fs-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_diff-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_delta-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libsvn_client-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libneon.so.27()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Processing Dependency: libapr-1.so.0()(64bit) for package: subversion-1.7.14-11.el7_4.x86_64\n--> Running transaction check\n---> Package apr.x86_64 0:1.4.8-3.el7_4.1 will be installed\n---> Package apr-util.x86_64 0:1.5.2-6.el7 will be installed\n---> Package neon.x86_64 0:0.30.0-3.el7 will be installed\n--> Processing Dependency: libgnutls.so.28(GNUTLS_2_12)(64bit) for package: neon-0.30.0-3.el7.x86_64\n--> Processing Dependency: libgnutls.so.28(GNUTLS_1_4)(64bit) for package: neon-0.30.0-3.el7.x86_64\n--> Processing Dependency: libproxy.so.1()(64bit) for package: neon-0.30.0-3.el7.x86_64\n--> Processing Dependency: libpakchois.so.0()(64bit) for package: neon-0.30.0-3.el7.x86_64\n--> Processing Dependency: libgnutls.so.28()(64bit) for package: neon-0.30.0-3.el7.x86_64\n---> Package perl-Digest.noarch 0:1.17-245.el7 will be installed\n---> Package perl-YAML.noarch 0:0.84-5.el7 will be installed\n--> Processing Dependency: perl(Data::Dumper) for package: perl-YAML-0.84-5.el7.noarch\n---> Package subversion-libs.x86_64 0:1.7.14-11.el7_4 will be installed\n---> Package subversion-perl.x86_64 0:1.7.14-11.el7_4 will be installed\n--> Running transaction check\n---> Package gnutls.x86_64 0:3.3.26-9.el7 will be installed\n--> Processing Dependency: trousers >= 0.3.11.2 for package: gnutls-3.3.26-9.el7.x86_64\n--> Processing Dependency: libnettle.so.4()(64bit) for package: gnutls-3.3.26-9.el7.x86_64\n--> Processing Dependency: libhogweed.so.2()(64bit) for package: gnutls-3.3.26-9.el7.x86_64\n---> Package libproxy.x86_64 0:0.4.11-10.el7 will be installed\n--> Processing Dependency: libmodman.so.1()(64bit) for package: libproxy-0.4.11-10.el7.x86_64\n---> Package pakchois.x86_64 0:0.4-10.el7 will be installed\n---> Package perl-Data-Dumper.x86_64 0:2.145-3.el7 will be installed\n--> Running transaction check\n---> Package libmodman.x86_64 0:2.0.1-8.el7 will be installed\n---> Package nettle.x86_64 0:2.7.1-8.el7 will be installed\n---> Package trousers.x86_64 0:0.3.14-2.el7 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package                Arch         Version                Repository     Size\n================================================================================\nInstalling:\n git-svn                x86_64       1.8.3.1-12.el7_4       updates       434 k\nInstalling for dependencies:\n apr                    x86_64       1.4.8-3.el7_4.1        updates       103 k\n apr-util               x86_64       1.5.2-6.el7            base           92 k\n gnutls                 x86_64       3.3.26-9.el7           base          677 k\n libmodman              x86_64       2.0.1-8.el7            base           28 k\n libproxy               x86_64       0.4.11-10.el7          base           64 k\n neon                   x86_64       0.30.0-3.el7           base          165 k\n nettle                 x86_64       2.7.1-8.el7            base          327 k\n pakchois               x86_64       0.4-10.el7             base           14 k\n perl-Data-Dumper       x86_64       2.145-3.el7            base           47 k\n perl-Digest            noarch       1.17-245.el7           base           23 k\n perl-Digest-MD5        x86_64       2.52-3.el7             base           30 k\n perl-Git-SVN           noarch       1.8.3.1-12.el7_4       updates        85 k\n perl-YAML              noarch       0.84-5.el7             base           84 k\n subversion             x86_64       1.7.14-11.el7_4        updates       1.0 M\n subversion-libs        x86_64       1.7.14-11.el7_4        updates       921 k\n subversion-perl        x86_64       1.7.14-11.el7_4        updates       799 k\n trousers               x86_64       0.3.14-2.el7           base          289 k\n\nTransaction Summary\n================================================================================\nInstall  1 Package (+17 Dependent packages)\n\nTotal download size: 5.1 M\nInstalled size: 17 M\nDownloading packages:\n--------------------------------------------------------------------------------\nTotal                                              2.2 MB/s | 5.1 MB  00:02     \nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : apr-1.4.8-3.el7_4.1.x86_64                                  1/18 \n  Installing : apr-util-1.5.2-6.el7.x86_64                                 2/18 \n  Installing : perl-Digest-1.17-245.el7.noarch                             3/18 \n  Installing : perl-Digest-MD5-2.52-3.el7.x86_64                           4/18 \n  Installing : trousers-0.3.14-2.el7.x86_64                                5/18 \n  Installing : pakchois-0.4-10.el7.x86_64                                  6/18 \n  Installing : nettle-2.7.1-8.el7.x86_64                                   7/18 \n  Installing : gnutls-3.3.26-9.el7.x86_64                                  8/18 \n  Installing : perl-Data-Dumper-2.145-3.el7.x86_64                         9/18 \n  Installing : perl-YAML-0.84-5.el7.noarch                                10/18 \n  Installing : libmodman-2.0.1-8.el7.x86_64                               11/18 \n  Installing : libproxy-0.4.11-10.el7.x86_64                              12/18 \n  Installing : neon-0.30.0-3.el7.x86_64                                   13/18 \n  Installing : subversion-libs-1.7.14-11.el7_4.x86_64                     14/18 \n  Installing : subversion-1.7.14-11.el7_4.x86_64                          15/18 \n  Installing : subversion-perl-1.7.14-11.el7_4.x86_64                     16/18 \n  Installing : perl-Git-SVN-1.8.3.1-12.el7_4.noarch                       17/18 \n  Installing : git-svn-1.8.3.1-12.el7_4.x86_64                            18/18 \n  Verifying  : perl-YAML-0.84-5.el7.noarch                                 1/18 \n  Verifying  : libmodman-2.0.1-8.el7.x86_64                                2/18 \n  Verifying  : neon-0.30.0-3.el7.x86_64                                    3/18 \n  Verifying  : subversion-libs-1.7.14-11.el7_4.x86_64                      4/18 \n  Verifying  : perl-Data-Dumper-2.145-3.el7.x86_64                         5/18 \n  Verifying  : perl-Digest-MD5-2.52-3.el7.x86_64                           6/18 \n  Verifying  : libproxy-0.4.11-10.el7.x86_64                               7/18 \n  Verifying  : apr-util-1.5.2-6.el7.x86_64                                 8/18 \n  Verifying  : apr-1.4.8-3.el7_4.1.x86_64                                  9/18 \n  Verifying  : perl-Git-SVN-1.8.3.1-12.el7_4.noarch                       10/18 \n  Verifying  : nettle-2.7.1-8.el7.x86_64                                  11/18 \n  Verifying  : pakchois-0.4-10.el7.x86_64                                 12/18 \n  Verifying  : trousers-0.3.14-2.el7.x86_64                               13/18 \n  Verifying  : perl-Digest-1.17-245.el7.noarch                            14/18 \n  Verifying  : git-svn-1.8.3.1-12.el7_4.x86_64                            15/18 \n  Verifying  : subversion-1.7.14-11.el7_4.x86_64                          16/18 \n  Verifying  : gnutls-3.3.26-9.el7.x86_64                                 17/18 \n  Verifying  : subversion-perl-1.7.14-11.el7_4.x86_64                     18/18 \n\nInstalled:\n  git-svn.x86_64 0:1.8.3.1-12.el7_4                                             \n\nDependency Installed:\n  apr.x86_64 0:1.4.8-3.el7_4.1                                                  \n  apr-util.x86_64 0:1.5.2-6.el7                                                 \n  gnutls.x86_64 0:3.3.26-9.el7                                                  \n  libmodman.x86_64 0:2.0.1-8.el7                                                \n  libproxy.x86_64 0:0.4.11-10.el7                                               \n  neon.x86_64 0:0.30.0-3.el7                                                    \n  nettle.x86_64 0:2.7.1-8.el7                                                   \n  pakchois.x86_64 0:0.4-10.el7                                                  \n  perl-Data-Dumper.x86_64 0:2.145-3.el7                                         \n  perl-Digest.noarch 0:1.17-245.el7                                             \n  perl-Digest-MD5.x86_64 0:2.52-3.el7                                           \n  perl-Git-SVN.noarch 0:1.8.3.1-12.el7_4                                        \n  perl-YAML.noarch 0:0.84-5.el7                                                 \n  subversion.x86_64 0:1.7.14-11.el7_4                                           \n  subversion-libs.x86_64 0:1.7.14-11.el7_4                                      \n  subversion-perl.x86_64 0:1.7.14-11.el7_4                                      \n  trousers.x86_64 0:0.3.14-2.el7                                                \n\nComplete!\n"]}
+
+TASK [geerlingguy.git : Update apt cache (Debian).] ****************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Ensure git is installed (Debian).] *********************
+skipping: [projectx] => (item=[])  => {"changed": false, "item": [], "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Include OS-specific variables (RedHat).] ***************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Include OS-specific variables (Fedora).] ***************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Include OS-specific variables (Debian).] ***************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Define git_install_from_source_dependencies.] **********
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Ensure git's dependencies are installed (RedHat).] *****
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Ensure git's dependencies are installed (Debian).] *****
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Get installed version] *********************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Force git install if the version numbers do not match] ***
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Download git.] *****************************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Expand git archive.] ***********************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.git : Build git.] ********************************************
+skipping: [projectx] => (item=all)  => {"changed": false, "item": "all", "skip_reason": "Conditional result was False"}
+skipping: [projectx] => (item=install)  => {"changed": false, "item": "install", "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.ansible : Install Ansible.] **********************************
+ok: [projectx] => {"changed": false, "msg": "", "rc": 0, "results": ["ansible-2.4.2.0-2.el7.noarch providing ansible is already installed"]}
+
+TASK [geerlingguy.ansible : Install Ansible.] **********************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.ansible : Add ansible repository.] ***************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.ansible : Update apt cache.] *********************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.ansible : Install Ansible.] **********************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.ansible : Enable Backports repository.] **********************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.ansible : Update apt cache.] *********************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.ansible : Install Ansible.] **********************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.docker : Ensure old versions of Docker are not installed.] ***
+ok: [projectx] => (item=docker) => {"changed": false, "item": "docker", "msg": "", "rc": 0, "results": ["docker is not installed"]}
+ok: [projectx] => (item=docker-common) => {"changed": false, "item": "docker-common", "msg": "", "rc": 0, "results": ["docker-common is not installed"]}
+ok: [projectx] => (item=docker-engine) => {"changed": false, "item": "docker-engine", "msg": "", "rc": 0, "results": ["docker-engine is not installed"]}
+
+TASK [geerlingguy.docker : Add Docker GPG key.] ********************************
+changed: [projectx] => {"changed": true}
+
+TASK [geerlingguy.docker : Add Docker repository.] *****************************
+changed: [projectx] => {"changed": true, "checksum_dest": null, "checksum_src": "b9cab0cb1ddbffb77de51ba8838ea60335a229f6", "dest": "/etc/yum.repos.d/docker-ce.repo", "gid": 0, "group": "root", "md5sum": "bbb0224eb355f307b39eed429c61be09", "mode": "0644", "msg": "OK (2424 bytes)", "owner": "root", "secontext": "system_u:object_r:system_conf_t:s0", "size": 2424, "src": "/tmp/tmpVmf5MK", "state": "file", "status_code": 200, "uid": 0, "url": "https://download.docker.com/linux/centos/docker-ce.repo"}
+
+TASK [geerlingguy.docker : Configure Docker Edge repo.] ************************
+changed: [projectx] => {"changed": true, "gid": 0, "group": "root", "mode": "0644", "msg": "option changed", "owner": "root", "path": "/etc/yum.repos.d/docker-ce.repo", "secontext": "system_u:object_r:system_conf_t:s0", "size": 2426, "state": "file", "uid": 0}
+
+TASK [geerlingguy.docker : Configure Docker Test repo.] ************************
+changed: [projectx] => {"changed": true, "gid": 0, "group": "root", "mode": "0644", "msg": "option changed", "owner": "root", "path": "/etc/yum.repos.d/docker-ce.repo", "secontext": "system_u:object_r:system_conf_t:s0", "size": 2428, "state": "file", "uid": 0}
+
+TASK [geerlingguy.docker : Ensure old versions of Docker are not installed.] ***
+skipping: [projectx] => (item=docker)  => {"changed": false, "item": "docker", "skip_reason": "Conditional result was False"}
+skipping: [projectx] => (item=docker-engine)  => {"changed": false, "item": "docker-engine", "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.docker : Ensure depdencies are installed.] *******************
+skipping: [projectx] => (item=[])  => {"changed": false, "item": [], "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.docker : Add Docker apt key.] ********************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.docker : Ensure curl is present (on older systems without SNI).] ***
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.docker : Add Docker apt key (alternative for older systems without SNI).] ***
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.docker : Add Docker repository.] *****************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.docker : Install Docker.] ************************************
+changed: [projectx] => {"changed": true, "msg": "", "rc": 0, "results": ["Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: mirrors.clouvider.net\n * epel: nl.mirror.babylon.network\n * extras: mirror.econdc.com\n * updates: centos.mirrors.nublue.co.uk\nResolving Dependencies\n--> Running transaction check\n---> Package docker-ce.x86_64 0:17.12.0.ce-1.el7.centos will be installed\n--> Processing Dependency: container-selinux >= 2.9 for package: docker-ce-17.12.0.ce-1.el7.centos.x86_64\n--> Processing Dependency: libcgroup for package: docker-ce-17.12.0.ce-1.el7.centos.x86_64\n--> Processing Dependency: libltdl.so.7()(64bit) for package: docker-ce-17.12.0.ce-1.el7.centos.x86_64\n--> Running transaction check\n---> Package container-selinux.noarch 2:2.36-1.gitff95335.el7 will be installed\n--> Processing Dependency: policycoreutils-python for package: 2:container-selinux-2.36-1.gitff95335.el7.noarch\n---> Package libcgroup.x86_64 0:0.41-13.el7 will be installed\n---> Package libtool-ltdl.x86_64 0:2.4.2-22.el7_3 will be installed\n--> Running transaction check\n---> Package policycoreutils-python.x86_64 0:2.5-17.1.el7 will be installed\n--> Processing Dependency: setools-libs >= 3.3.8-1 for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: libsemanage-python >= 2.5-5 for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: audit-libs-python >= 2.1.3-4 for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: python-IPy for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: libqpol.so.1(VERS_1.4)(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: libqpol.so.1(VERS_1.2)(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: libapol.so.4(VERS_4.0)(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: checkpolicy for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: libqpol.so.1()(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Processing Dependency: libapol.so.4()(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64\n--> Running transaction check\n---> Package audit-libs-python.x86_64 0:2.7.6-3.el7 will be installed\n---> Package checkpolicy.x86_64 0:2.5-4.el7 will be installed\n---> Package libsemanage-python.x86_64 0:2.5-8.el7 will be installed\n---> Package python-IPy.noarch 0:0.75-6.el7 will be installed\n---> Package setools-libs.x86_64 0:3.3.8-1.1.el7 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package                Arch   Version                   Repository        Size\n================================================================================\nInstalling:\n docker-ce              x86_64 17.12.0.ce-1.el7.centos   docker-ce-stable  30 M\nInstalling for dependencies:\n audit-libs-python      x86_64 2.7.6-3.el7               base              73 k\n checkpolicy            x86_64 2.5-4.el7                 base             290 k\n container-selinux      noarch 2:2.36-1.gitff95335.el7   extras            31 k\n libcgroup              x86_64 0.41-13.el7               base              65 k\n libsemanage-python     x86_64 2.5-8.el7                 base             104 k\n libtool-ltdl           x86_64 2.4.2-22.el7_3            base              49 k\n policycoreutils-python x86_64 2.5-17.1.el7              base             446 k\n python-IPy             noarch 0.75-6.el7                base              32 k\n setools-libs           x86_64 3.3.8-1.1.el7             base             612 k\n\nTransaction Summary\n================================================================================\nInstall  1 Package (+9 Dependent packages)\n\nTotal download size: 32 M\nInstalled size: 128 M\nDownloading packages:\n--------------------------------------------------------------------------------\nTotal                                              2.3 MB/s |  32 MB  00:14     \nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : libcgroup-0.41-13.el7.x86_64                                1/10 \n  Installing : setools-libs-3.3.8-1.1.el7.x86_64                           2/10 \n  Installing : checkpolicy-2.5-4.el7.x86_64                                3/10 \n  Installing : libtool-ltdl-2.4.2-22.el7_3.x86_64                          4/10 \n  Installing : python-IPy-0.75-6.el7.noarch                                5/10 \n  Installing : audit-libs-python-2.7.6-3.el7.x86_64                        6/10 \n  Installing : libsemanage-python-2.5-8.el7.x86_64                         7/10 \n  Installing : policycoreutils-python-2.5-17.1.el7.x86_64                  8/10 \n  Installing : 2:container-selinux-2.36-1.gitff95335.el7.noarch            9/10 \n  Installing : docker-ce-17.12.0.ce-1.el7.centos.x86_64                   10/10 \n  Verifying  : libsemanage-python-2.5-8.el7.x86_64                         1/10 \n  Verifying  : audit-libs-python-2.7.6-3.el7.x86_64                        2/10 \n  Verifying  : python-IPy-0.75-6.el7.noarch                                3/10 \n  Verifying  : libtool-ltdl-2.4.2-22.el7_3.x86_64                          4/10 \n  Verifying  : policycoreutils-python-2.5-17.1.el7.x86_64                  5/10 \n  Verifying  : libcgroup-0.41-13.el7.x86_64                                6/10 \n  Verifying  : docker-ce-17.12.0.ce-1.el7.centos.x86_64                    7/10 \n  Verifying  : checkpolicy-2.5-4.el7.x86_64                                8/10 \n  Verifying  : 2:container-selinux-2.36-1.gitff95335.el7.noarch            9/10 \n  Verifying  : setools-libs-3.3.8-1.1.el7.x86_64                          10/10 \n\nInstalled:\n  docker-ce.x86_64 0:17.12.0.ce-1.el7.centos                                    \n\nDependency Installed:\n  audit-libs-python.x86_64 0:2.7.6-3.el7                                        \n  checkpolicy.x86_64 0:2.5-4.el7                                                \n  container-selinux.noarch 2:2.36-1.gitff95335.el7                              \n  libcgroup.x86_64 0:0.41-13.el7                                                \n  libsemanage-python.x86_64 0:2.5-8.el7                                         \n  libtool-ltdl.x86_64 0:2.4.2-22.el7_3                                          \n  policycoreutils-python.x86_64 0:2.5-17.1.el7                                  \n  python-IPy.noarch 0:0.75-6.el7                                                \n  setools-libs.x86_64 0:3.3.8-1.1.el7                                           \n\nComplete!\n"]}
+
+TASK [geerlingguy.docker : Ensure Docker is started and enabled at boot.] ******
+changed: [projectx] => {"changed": true, "enabled": true, "name": "docker", "state": "started", "status": {"ActiveEnterTimestampMonotonic": "0", "ActiveExitTimestampMonotonic": "0", "ActiveState": "inactive", "After": "systemd-journald.socket system.slice firewalld.service basic.target network-online.target", "AllowIsolate": "no", "AmbientCapabilities": "0", "AssertResult": "no", "AssertTimestampMonotonic": "0", "Before": "shutdown.target", "BlockIOAccounting": "no", "BlockIOWeight": "18446744073709551615", "CPUAccounting": "no", "CPUQuotaPerSecUSec": "infinity", "CPUSchedulingPolicy": "0", "CPUSchedulingPriority": "0", "CPUSchedulingResetOnFork": "no", "CPUShares": "18446744073709551615", "CanIsolate": "no", "CanReload": "yes", "CanStart": "yes", "CanStop": "yes", "CapabilityBoundingSet": "18446744073709551615", "ConditionResult": "no", "ConditionTimestampMonotonic": "0", "Conflicts": "shutdown.target", "ControlPID": "0", "DefaultDependencies": "yes", "Delegate": "yes", "Description": "Docker Application Container Engine", "DevicePolicy": "auto", "Documentation": "https://docs.docker.com", "ExecMainCode": "0", "ExecMainExitTimestampMonotonic": "0", "ExecMainPID": "0", "ExecMainStartTimestampMonotonic": "0", "ExecMainStatus": "0", "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -s HUP $MAINPID ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "ExecStart": "{ path=/usr/bin/dockerd ; argv[]=/usr/bin/dockerd ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "FailureAction": "none", "FileDescriptorStoreMax": "0", "FragmentPath": "/usr/lib/systemd/system/docker.service", "GuessMainPID": "yes", "IOScheduling": "0", "Id": "docker.service", "IgnoreOnIsolate": "no", "IgnoreOnSnapshot": "no", "IgnoreSIGPIPE": "yes", "InactiveEnterTimestampMonotonic": "0", "InactiveExitTimestampMonotonic": "0", "JobTimeoutAction": "none", "JobTimeoutUSec": "0", "KillMode": "process", "KillSignal": "15", "LimitAS": "18446744073709551615", "LimitCORE": "18446744073709551615", "LimitCPU": "18446744073709551615", "LimitDATA": "18446744073709551615", "LimitFSIZE": "18446744073709551615", "LimitLOCKS": "18446744073709551615", "LimitMEMLOCK": "65536", "LimitMSGQUEUE": "819200", "LimitNICE": "0", "LimitNOFILE": "18446744073709551615", "LimitNPROC": "18446744073709551615", "LimitRSS": "18446744073709551615", "LimitRTPRIO": "0", "LimitRTTIME": "18446744073709551615", "LimitSIGPENDING": "7169", "LimitSTACK": "18446744073709551615", "LoadState": "loaded", "MainPID": "0", "MemoryAccounting": "no", "MemoryCurrent": "18446744073709551615", "MemoryLimit": "18446744073709551615", "MountFlags": "0", "Names": "docker.service", "NeedDaemonReload": "no", "Nice": "0", "NoNewPrivileges": "no", "NonBlocking": "no", "NotifyAccess": "main", "OOMScoreAdjust": "0", "OnFailureJobMode": "replace", "PermissionsStartOnly": "no", "PrivateDevices": "no", "PrivateNetwork": "no", "PrivateTmp": "no", "ProtectHome": "no", "ProtectSystem": "no", "RefuseManualStart": "no", "RefuseManualStop": "no", "RemainAfterExit": "no", "Requires": "basic.target", "Restart": "on-failure", "RestartUSec": "100ms", "Result": "success", "RootDirectoryStartOnly": "no", "RuntimeDirectoryMode": "0755", "SameProcessGroup": "no", "SecureBits": "0", "SendSIGHUP": "no", "SendSIGKILL": "yes", "Slice": "system.slice", "StandardError": "inherit", "StandardInput": "null", "StandardOutput": "journal", "StartLimitAction": "none", "StartLimitBurst": "3", "StartLimitInterval": "60000000", "StartupBlockIOWeight": "18446744073709551615", "StartupCPUShares": "18446744073709551615", "StatusErrno": "0", "StopWhenUnneeded": "no", "SubState": "dead", "SyslogLevelPrefix": "yes", "SyslogPriority": "30", "SystemCallErrorNumber": "0", "TTYReset": "no", "TTYVHangup": "no", "TTYVTDisallocate": "no", "TasksAccounting": "no", "TasksCurrent": "18446744073709551615", "TasksMax": "18446744073709551615", "TimeoutStartUSec": "0", "TimeoutStopUSec": "1min 30s", "TimerSlackNSec": "50000", "Transient": "no", "Type": "notify", "UMask": "0022", "UnitFilePreset": "disabled", "UnitFileState": "disabled", "Wants": "network-online.target system.slice", "WatchdogTimestampMonotonic": "0", "WatchdogUSec": "0"}}
+
+TASK [geerlingguy.docker : Check current docker-compose version.] **************
+ok: [projectx] => {"changed": false, "cmd": "docker-compose --version", "failed_when_result": false, "msg": "[Errno 2] No such file or directory", "rc": 2}
+
+TASK [geerlingguy.docker : Delete existing docker-compose version if it's different.] ***
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.docker : Install Docker Compose (if configured).] ************
+changed: [projectx] => {"changed": true, "checksum_dest": null, "checksum_src": "51b79ed1ed536dd6bd02cb952bde0fcb66265ce0", "dest": "/usr/local/bin/docker-compose", "gid": 0, "group": "root", "md5sum": "13196d9b1c3f3be0964b7536c39348b5", "mode": "0755", "msg": "OK (8273264 bytes)", "owner": "root", "secontext": "system_u:object_r:bin_t:s0", "size": 8273264, "src": "/tmp/tmp9y683C", "state": "file", "status_code": 200, "uid": 0, "url": "https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64"}
+
+TASK [geerlingguy.pip : Ensure Pip is installed.] ******************************
+changed: [projectx] => {"changed": true, "msg": "warning: /var/cache/yum/x86_64/7/epel/packages/python2-pip-8.1.2-5.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY\nImporting GPG key 0x352C64E5:\n Userid     : \"Fedora EPEL (7) <epel@fedoraproject.org>\"\n Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5\n Package    : epel-release-7-9.noarch (@extras)\n From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7\n", "rc": 0, "results": ["Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: mirrors.clouvider.net\n * epel: mirror.serverbeheren.nl\n * extras: mirror.econdc.com\n * updates: centos.mirrors.nublue.co.uk\nResolving Dependencies\n--> Running transaction check\n---> Package python2-pip.noarch 0:8.1.2-5.el7 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package              Arch            Version               Repository     Size\n================================================================================\nInstalling:\n python2-pip          noarch          8.1.2-5.el7           epel          1.7 M\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal download size: 1.7 M\nInstalled size: 7.2 M\nDownloading packages:\nPublic key for python2-pip-8.1.2-5.el7.noarch.rpm is not installed\nRetrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : python2-pip-8.1.2-5.el7.noarch                               1/1 \n  Verifying  : python2-pip-8.1.2-5.el7.noarch                               1/1 \n\nInstalled:\n  python2-pip.noarch 0:8.1.2-5.el7                                              \n\nComplete!\n"]}
+
+TASK [geerlingguy.pip : Ensure pip_install_packages are installed.] ************
+changed: [projectx] => (item={u'name': u'docker-py'}) => {"changed": true, "cmd": "/bin/pip2 install docker-py", "item": {"name": "docker-py"}, "name": ["docker-py"], "requirements": null, "state": "present", "stderr": "You are using pip version 8.1.2, however version 9.0.1 is available.\nYou should consider upgrading via the 'pip install --upgrade pip' command.\n", "stderr_lines": ["You are using pip version 8.1.2, however version 9.0.1 is available.", "You should consider upgrading via the 'pip install --upgrade pip' command."], "stdout": "Collecting docker-py\n  Downloading docker_py-1.10.6-py2.py3-none-any.whl (50kB)\nCollecting requests!=2.11.0,>=2.5.2 (from docker-py)\n  Downloading requests-2.18.4-py2.py3-none-any.whl (88kB)\nCollecting backports.ssl-match-hostname>=3.5; python_version < \"3.5\" (from docker-py)\n  Downloading backports.ssl_match_hostname-3.5.0.1.tar.gz\nCollecting docker-pycreds>=0.2.1 (from docker-py)\n  Downloading docker_pycreds-0.2.1-py2.py3-none-any.whl\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.7/site-packages (from docker-py)\nCollecting websocket-client>=0.32.0 (from docker-py)\n  Downloading websocket_client-0.46.0-py2.py3-none-any.whl (200kB)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.7/site-packages (from docker-py)\nCollecting certifi>=2017.4.17 (from requests!=2.11.0,>=2.5.2->docker-py)\n  Downloading certifi-2018.1.18-py2.py3-none-any.whl (151kB)\nCollecting chardet<3.1.0,>=3.0.2 (from requests!=2.11.0,>=2.5.2->docker-py)\n  Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)\nCollecting idna<2.7,>=2.5 (from requests!=2.11.0,>=2.5.2->docker-py)\n  Downloading idna-2.6-py2.py3-none-any.whl (56kB)\nCollecting urllib3<1.23,>=1.21.1 (from requests!=2.11.0,>=2.5.2->docker-py)\n  Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)\nInstalling collected packages: certifi, chardet, idna, urllib3, requests, backports.ssl-match-hostname, docker-pycreds, websocket-client, docker-py\n  Found existing installation: chardet 2.2.1\n    Uninstalling chardet-2.2.1:\n      Successfully uninstalled chardet-2.2.1\n  Found existing installation: idna 2.4\n    Uninstalling idna-2.4:\n      Successfully uninstalled idna-2.4\n  Found existing installation: backports.ssl-match-hostname 3.4.0.2\n    Uninstalling backports.ssl-match-hostname-3.4.0.2:\n      Successfully uninstalled backports.ssl-match-hostname-3.4.0.2\n  Running setup.py install for backports.ssl-match-hostname: started\n    Running setup.py install for backports.ssl-match-hostname: finished with status 'done'\nSuccessfully installed backports.ssl-match-hostname-3.5.0.1 certifi-2018.1.18 chardet-3.0.4 docker-py-1.10.6 docker-pycreds-0.2.1 idna-2.6 requests-2.18.4 urllib3-1.22 websocket-client-0.46.0\n", "stdout_lines": ["Collecting docker-py", "  Downloading docker_py-1.10.6-py2.py3-none-any.whl (50kB)", "Collecting requests!=2.11.0,>=2.5.2 (from docker-py)", "  Downloading requests-2.18.4-py2.py3-none-any.whl (88kB)", "Collecting backports.ssl-match-hostname>=3.5; python_version < \"3.5\" (from docker-py)", "  Downloading backports.ssl_match_hostname-3.5.0.1.tar.gz", "Collecting docker-pycreds>=0.2.1 (from docker-py)", "  Downloading docker_pycreds-0.2.1-py2.py3-none-any.whl", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.7/site-packages (from docker-py)", "Collecting websocket-client>=0.32.0 (from docker-py)", "  Downloading websocket_client-0.46.0-py2.py3-none-any.whl (200kB)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.7/site-packages (from docker-py)", "Collecting certifi>=2017.4.17 (from requests!=2.11.0,>=2.5.2->docker-py)", "  Downloading certifi-2018.1.18-py2.py3-none-any.whl (151kB)", "Collecting chardet<3.1.0,>=3.0.2 (from requests!=2.11.0,>=2.5.2->docker-py)", "  Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)", "Collecting idna<2.7,>=2.5 (from requests!=2.11.0,>=2.5.2->docker-py)", "  Downloading idna-2.6-py2.py3-none-any.whl (56kB)", "Collecting urllib3<1.23,>=1.21.1 (from requests!=2.11.0,>=2.5.2->docker-py)", "  Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)", "Installing collected packages: certifi, chardet, idna, urllib3, requests, backports.ssl-match-hostname, docker-pycreds, websocket-client, docker-py", "  Found existing installation: chardet 2.2.1", "    Uninstalling chardet-2.2.1:", "      Successfully uninstalled chardet-2.2.1", "  Found existing installation: idna 2.4", "    Uninstalling idna-2.4:", "      Successfully uninstalled idna-2.4", "  Found existing installation: backports.ssl-match-hostname 3.4.0.2", "    Uninstalling backports.ssl-match-hostname-3.4.0.2:", "      Successfully uninstalled backports.ssl-match-hostname-3.4.0.2", "  Running setup.py install for backports.ssl-match-hostname: started", "    Running setup.py install for backports.ssl-match-hostname: finished with status 'done'", "Successfully installed backports.ssl-match-hostname-3.5.0.1 certifi-2018.1.18 chardet-3.0.4 docker-py-1.10.6 docker-pycreds-0.2.1 idna-2.6 requests-2.18.4 urllib3-1.22 websocket-client-0.46.0"], "version": null, "virtualenv": null}
+
+TASK [geerlingguy.nodejs : Set up the Nodesource RPM directory for Node.js > 0.10.] ***
+ok: [projectx] => {"ansible_facts": {"nodejs_rhel_rpm_dir": "pub_6.x"}, "changed": false}
+
+TASK [geerlingguy.nodejs : Set up the Nodesource RPM variable for Node.js == 0.10.] ***
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.nodejs : Import Nodesource RPM key (CentOS < 7).] ************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.nodejs : Import Nodesource RPM key (CentOS 7+)..] ************
+changed: [projectx] => {"changed": true}
+
+TASK [geerlingguy.nodejs : Add Nodesource repositories for Node.js (CentOS < 7).] ***
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.nodejs : Add Nodesource repositories for Node.js (CentOS 7+).] ***
+changed: [projectx] => {"changed": true, "msg": "", "rc": 0, "results": ["Loaded plugins: fastestmirror\nExamining /tmp/nodesource-release-el7-1.noarchMWjNqp.rpm: nodesource-release-el7-1.noarch\nMarking /tmp/nodesource-release-el7-1.noarchMWjNqp.rpm to be installed\nResolving Dependencies\n--> Running transaction check\n---> Package nodesource-release.noarch 0:el7-1 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package            Arch   Version Repository                              Size\n================================================================================\nInstalling:\n nodesource-release noarch el7-1   /nodesource-release-el7-1.noarchMWjNqp 3.1 k\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal size: 3.1 k\nInstalled size: 3.1 k\nDownloading packages:\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : nodesource-release-el7-1.noarch                              1/1 \n  Verifying  : nodesource-release-el7-1.noarch                              1/1 \n\nInstalled:\n  nodesource-release.noarch 0:el7-1                                             \n\nComplete!\n"]}
+
+TASK [geerlingguy.nodejs : Ensure Node.js and npm are installed.] **************
+changed: [projectx] => {"changed": true, "msg": "", "rc": 0, "results": ["Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: mirrors.clouvider.net\n * epel: mirror.nl.leaseweb.net\n * extras: mirror.econdc.com\n * updates: centos.mirrors.nublue.co.uk\nResolving Dependencies\n--> Running transaction check\n---> Package nodejs.x86_64 2:6.12.2-1nodesource will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package      Arch         Version                       Repository        Size\n================================================================================\nInstalling:\n nodejs       x86_64       2:6.12.2-1nodesource          nodesource        13 M\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal download size: 13 M\nInstalled size: 38 M\nDownloading packages:\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : 2:nodejs-6.12.2-1nodesource.x86_64                           1/1 \n  Verifying  : 2:nodejs-6.12.2-1nodesource.x86_64                           1/1 \n\nInstalled:\n  nodejs.x86_64 2:6.12.2-1nodesource                                            \n\nComplete!\n"]}
+
+TASK [geerlingguy.nodejs : Ensure apt-transport-https is installed.] ***********
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.nodejs : Add Nodesource apt key.] ****************************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.nodejs : Add NodeSource repositories for Node.js.] ***********
+skipping: [projectx] => (item=deb https://deb.nodesource.com/node_6.x Core main)  => {"changed": false, "item": "deb https://deb.nodesource.com/node_6.x Core main", "skip_reason": "Conditional result was False"}
+skipping: [projectx] => (item=deb-src https://deb.nodesource.com/node_6.x Core main)  => {"changed": false, "item": "deb-src https://deb.nodesource.com/node_6.x Core main", "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.nodejs : Update apt cache if repo was added.] ****************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.nodejs : Ensure Node.js and npm are installed.] **************
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.nodejs : Define nodejs_install_npm_user] *********************
+ok: [projectx] => {"ansible_facts": {"nodejs_install_npm_user": "vagrant"}, "changed": false}
+
+TASK [geerlingguy.nodejs : Create npm global directory] ************************
+changed: [projectx] => {"changed": true, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/local/lib/npm", "secontext": "unconfined_u:object_r:lib_t:s0", "size": 6, "state": "directory", "uid": 1000}
+
+TASK [geerlingguy.nodejs : Add npm_config_prefix bin directory to global $PATH.] ***
+changed: [projectx] => {"changed": true, "checksum": "e2aeb9ff2a6730248c3d7347e74e8a0cca99f2a0", "dest": "/etc/profile.d/npm.sh", "gid": 0, "group": "root", "md5sum": "65d227e2c8c8b7a2b3b2c75500e69559", "mode": "0644", "owner": "root", "secontext": "system_u:object_r:bin_t:s0", "size": 149, "src": "/home/vagrant/.ansible/tmp/ansible-tmp-1517839161.99-261076372410865/source", "state": "file", "uid": 0}
+
+TASK [geerlingguy.nodejs : Ensure npm global packages are installed.] **********
+
+TASK [geerlingguy.nodejs : Install packages defined in a given package.json.] ***
+skipping: [projectx] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [geerlingguy.awx : Include OS-specific variables.] ************************
+ok: [projectx] => {"ansible_facts": {"awx_package_dependencies": ["@Development tools", "gettext", "gcc-c++", "bzip2"]}, "ansible_included_var_files": ["/vagrant/shared/ansible/roles/geerlingguy.awx/vars/RedHat.yml"], "changed": false}
+
+TASK [geerlingguy.awx : Install AWX dependencies.] *****************************
+changed: [projectx] => (item=@Development tools) => {"changed": true, "item": "@Development tools", "msg": "", "rc": 0, "results": ["Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: mirrors.clouvider.net\n * epel: mirror.sax.uk.as61049.net\n * extras: mirror.econdc.com\n * updates: centos.mirrors.nublue.co.uk\nResolving Dependencies\n--> Running transaction check\n---> Package autoconf.noarch 0:2.69-11.el7 will be installed\n--> Processing Dependency: m4 >= 1.4.14 for package: autoconf-2.69-11.el7.noarch\n---> Package automake.noarch 0:1.13.4-3.el7 will be installed\n--> Processing Dependency: perl(Thread::Queue) for package: automake-1.13.4-3.el7.noarch\n--> Processing Dependency: perl(TAP::Parser) for package: automake-1.13.4-3.el7.noarch\n---> Package bison.x86_64 0:3.0.4-1.el7 will be installed\n---> Package byacc.x86_64 0:1.9.20130304-3.el7 will be installed\n---> Package cscope.x86_64 0:15.8-10.el7 will be installed\n--> Processing Dependency: emacs-filesystem for package: cscope-15.8-10.el7.x86_64\n---> Package ctags.x86_64 0:5.8-13.el7 will be installed\n---> Package diffstat.x86_64 0:1.57-4.el7 will be installed\n---> Package doxygen.x86_64 1:1.8.5-3.el7 will be installed\n---> Package elfutils.x86_64 0:0.168-8.el7 will be installed\n---> Package flex.x86_64 0:2.5.37-3.el7 will be installed\n---> Package gcc-c++.x86_64 0:4.8.5-16.el7_4.1 will be installed\n--> Processing Dependency: libstdc++-devel = 4.8.5-16.el7_4.1 for package: gcc-c++-4.8.5-16.el7_4.1.x86_64\n---> Package gcc-gfortran.x86_64 0:4.8.5-16.el7_4.1 will be installed\n--> Processing Dependency: libquadmath-devel = 4.8.5-16.el7_4.1 for package: gcc-gfortran-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libquadmath = 4.8.5-16.el7_4.1 for package: gcc-gfortran-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libgfortran = 4.8.5-16.el7_4.1 for package: gcc-gfortran-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libgfortran.so.3()(64bit) for package: gcc-gfortran-4.8.5-16.el7_4.1.x86_64\n---> Package indent.x86_64 0:2.2.11-13.el7 will be installed\n---> Package intltool.noarch 0:0.50.2-7.el7 will be installed\n--> Processing Dependency: perl(XML::Parser) for package: intltool-0.50.2-7.el7.noarch\n--> Processing Dependency: gettext-devel for package: intltool-0.50.2-7.el7.noarch\n---> Package libtool.x86_64 0:2.4.2-22.el7_3 will be installed\n---> Package patch.x86_64 0:2.7.1-8.el7 will be installed\n---> Package patchutils.x86_64 0:0.3.3-4.el7 will be installed\n---> Package rcs.x86_64 0:5.9.0-5.el7 will be installed\n---> Package redhat-rpm-config.noarch 0:9.1.0-76.el7.centos will be installed\n--> Processing Dependency: dwz >= 0.4 for package: redhat-rpm-config-9.1.0-76.el7.centos.noarch\n--> Processing Dependency: zip for package: redhat-rpm-config-9.1.0-76.el7.centos.noarch\n--> Processing Dependency: perl-srpm-macros for package: redhat-rpm-config-9.1.0-76.el7.centos.noarch\n---> Package rpm-build.x86_64 0:4.11.3-25.el7 will be installed\n--> Processing Dependency: unzip for package: rpm-build-4.11.3-25.el7.x86_64\n--> Processing Dependency: /usr/bin/gdb-add-index for package: rpm-build-4.11.3-25.el7.x86_64\n---> Package rpm-sign.x86_64 0:4.11.3-25.el7 will be installed\n---> Package swig.x86_64 0:2.0.10-5.el7 will be installed\n---> Package systemtap.x86_64 0:3.1-5.el7_4 will be installed\n--> Processing Dependency: systemtap-devel = 3.1-5.el7_4 for package: systemtap-3.1-5.el7_4.x86_64\n--> Processing Dependency: systemtap-client = 3.1-5.el7_4 for package: systemtap-3.1-5.el7_4.x86_64\n--> Running transaction check\n---> Package dwz.x86_64 0:0.11-3.el7 will be installed\n---> Package emacs-filesystem.noarch 1:24.3-20.el7_4 will be installed\n---> Package gdb.x86_64 0:7.6.1-100.el7_4.1 will be installed\n---> Package gettext-devel.x86_64 0:0.19.8.1-2.el7 will be installed\n--> Processing Dependency: gettext-common-devel = 0.19.8.1-2.el7 for package: gettext-devel-0.19.8.1-2.el7.x86_64\n---> Package libgfortran.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libquadmath.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libquadmath-devel.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libstdc++-devel.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package m4.x86_64 0:1.4.16-10.el7 will be installed\n---> Package perl-Test-Harness.noarch 0:3.28-3.el7 will be installed\n---> Package perl-Thread-Queue.noarch 0:3.02-2.el7 will be installed\n---> Package perl-XML-Parser.x86_64 0:2.41-10.el7 will be installed\n---> Package perl-srpm-macros.noarch 0:1-8.el7 will be installed\n---> Package systemtap-client.x86_64 0:3.1-5.el7_4 will be installed\n--> Processing Dependency: systemtap-runtime = 3.1-5.el7_4 for package: systemtap-client-3.1-5.el7_4.x86_64\n--> Processing Dependency: mokutil for package: systemtap-client-3.1-5.el7_4.x86_64\n--> Processing Dependency: libavahi-common.so.3()(64bit) for package: systemtap-client-3.1-5.el7_4.x86_64\n--> Processing Dependency: libavahi-client.so.3()(64bit) for package: systemtap-client-3.1-5.el7_4.x86_64\n---> Package systemtap-devel.x86_64 0:3.1-5.el7_4 will be installed\n---> Package unzip.x86_64 0:6.0-16.el7 will be installed\n---> Package zip.x86_64 0:3.0-11.el7 will be installed\n--> Running transaction check\n---> Package avahi-libs.x86_64 0:0.6.31-17.el7 will be installed\n---> Package gettext-common-devel.noarch 0:0.19.8.1-2.el7 will be installed\n---> Package mokutil.x86_64 0:12-1.el7.centos will be installed\n--> Processing Dependency: libefivar.so.1(libefivar.so.0)(64bit) for package: mokutil-12-1.el7.centos.x86_64\n--> Processing Dependency: libefivar.so.1(LIBEFIVAR_0.24)(64bit) for package: mokutil-12-1.el7.centos.x86_64\n--> Processing Dependency: libefivar.so.1()(64bit) for package: mokutil-12-1.el7.centos.x86_64\n---> Package systemtap-runtime.x86_64 0:3.1-5.el7_4 will be installed\n--> Processing Dependency: libsymtabAPI.so.9.3()(64bit) for package: systemtap-runtime-3.1-5.el7_4.x86_64\n--> Processing Dependency: libdyninstAPI.so.9.3()(64bit) for package: systemtap-runtime-3.1-5.el7_4.x86_64\n--> Running transaction check\n---> Package dyninst.x86_64 0:9.3.1-1.el7 will be installed\n--> Processing Dependency: libdwarf.so.0()(64bit) for package: dyninst-9.3.1-1.el7.x86_64\n--> Processing Dependency: libboost_thread-mt.so.1.53.0()(64bit) for package: dyninst-9.3.1-1.el7.x86_64\n--> Processing Dependency: libboost_system-mt.so.1.53.0()(64bit) for package: dyninst-9.3.1-1.el7.x86_64\n--> Processing Dependency: libboost_date_time-mt.so.1.53.0()(64bit) for package: dyninst-9.3.1-1.el7.x86_64\n---> Package efivar-libs.x86_64 0:31-4.el7 will be installed\n--> Running transaction check\n---> Package boost-date-time.x86_64 0:1.53.0-27.el7 will be installed\n---> Package boost-system.x86_64 0:1.53.0-27.el7 will be installed\n---> Package boost-thread.x86_64 0:1.53.0-27.el7 will be installed\n---> Package libdwarf.x86_64 0:20130207-4.el7 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package                  Arch       Version                  Repository   Size\n================================================================================\nInstalling for group install \"Development Tools\":\n autoconf                 noarch     2.69-11.el7              base        701 k\n automake                 noarch     1.13.4-3.el7             base        679 k\n bison                    x86_64     3.0.4-1.el7              base        674 k\n byacc                    x86_64     1.9.20130304-3.el7       base         65 k\n cscope                   x86_64     15.8-10.el7              base        203 k\n ctags                    x86_64     5.8-13.el7               base        155 k\n diffstat                 x86_64     1.57-4.el7               base         35 k\n doxygen                  x86_64     1:1.8.5-3.el7            base        3.6 M\n elfutils                 x86_64     0.168-8.el7              base        279 k\n flex                     x86_64     2.5.37-3.el7             base        292 k\n gcc-c++                  x86_64     4.8.5-16.el7_4.1         updates     7.2 M\n gcc-gfortran             x86_64     4.8.5-16.el7_4.1         updates     6.6 M\n indent                   x86_64     2.2.11-13.el7            base        150 k\n intltool                 noarch     0.50.2-7.el7             base         59 k\n libtool                  x86_64     2.4.2-22.el7_3           base        588 k\n patch                    x86_64     2.7.1-8.el7              base        110 k\n patchutils               x86_64     0.3.3-4.el7              base        104 k\n rcs                      x86_64     5.9.0-5.el7              base        230 k\n redhat-rpm-config        noarch     9.1.0-76.el7.centos      base         79 k\n rpm-build                x86_64     4.11.3-25.el7            base        146 k\n rpm-sign                 x86_64     4.11.3-25.el7            base         46 k\n swig                     x86_64     2.0.10-5.el7             base        1.3 M\n systemtap                x86_64     3.1-5.el7_4              updates     144 k\nInstalling for dependencies:\n avahi-libs               x86_64     0.6.31-17.el7            base         61 k\n boost-date-time          x86_64     1.53.0-27.el7            base         52 k\n boost-system             x86_64     1.53.0-27.el7            base         40 k\n boost-thread             x86_64     1.53.0-27.el7            base         57 k\n dwz                      x86_64     0.11-3.el7               base         99 k\n dyninst                  x86_64     9.3.1-1.el7              base        3.5 M\n efivar-libs              x86_64     31-4.el7                 base         68 k\n emacs-filesystem         noarch     1:24.3-20.el7_4          updates      58 k\n gdb                      x86_64     7.6.1-100.el7_4.1        updates     2.4 M\n gettext-common-devel     noarch     0.19.8.1-2.el7           base        410 k\n gettext-devel            x86_64     0.19.8.1-2.el7           base        320 k\n libdwarf                 x86_64     20130207-4.el7           base        109 k\n libgfortran              x86_64     4.8.5-16.el7_4.1         updates     296 k\n libquadmath              x86_64     4.8.5-16.el7_4.1         updates     186 k\n libquadmath-devel        x86_64     4.8.5-16.el7_4.1         updates      49 k\n libstdc++-devel          x86_64     4.8.5-16.el7_4.1         updates     1.5 M\n m4                       x86_64     1.4.16-10.el7            base        256 k\n mokutil                  x86_64     12-1.el7.centos          base         41 k\n perl-Test-Harness        noarch     3.28-3.el7               base        302 k\n perl-Thread-Queue        noarch     3.02-2.el7               base         17 k\n perl-XML-Parser          x86_64     2.41-10.el7              base        223 k\n perl-srpm-macros         noarch     1-8.el7                  base        4.6 k\n systemtap-client         x86_64     3.1-5.el7_4              updates     3.7 M\n systemtap-devel          x86_64     3.1-5.el7_4              updates     2.0 M\n systemtap-runtime        x86_64     3.1-5.el7_4              updates     394 k\n unzip                    x86_64     6.0-16.el7               base        169 k\n zip                      x86_64     3.0-11.el7               base        260 k\n\nTransaction Summary\n================================================================================\nInstall  23 Packages (+27 Dependent packages)\n\nTotal download size: 40 M\nInstalled size: 117 M\nDownloading packages:\n--------------------------------------------------------------------------------\nTotal                                              2.1 MB/s |  40 MB  00:18     \nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : libquadmath-4.8.5-16.el7_4.1.x86_64                         1/50 \n  Installing : m4-1.4.16-10.el7.x86_64                                     2/50 \n  Installing : autoconf-2.69-11.el7.noarch                                 3/50 \n  Installing : zip-3.0-11.el7.x86_64                                       4/50 \n  Installing : unzip-6.0-16.el7.x86_64                                     5/50 \n  Installing : patch-2.7.1-8.el7.x86_64                                    6/50 \n  Installing : avahi-libs-0.6.31-17.el7.x86_64                             7/50 \n  Installing : boost-system-1.53.0-27.el7.x86_64                           8/50 \n  Installing : perl-Thread-Queue-3.02-2.el7.noarch                         9/50 \n  Installing : boost-thread-1.53.0-27.el7.x86_64                          10/50 \n  Installing : systemtap-devel-3.1-5.el7_4.x86_64                         11/50 \n  Installing : libgfortran-4.8.5-16.el7_4.1.x86_64                        12/50 \n  Installing : libquadmath-devel-4.8.5-16.el7_4.1.x86_64                  13/50 \n  Installing : perl-srpm-macros-1-8.el7.noarch                            14/50 \n  Installing : dwz-0.11-3.el7.x86_64                                      15/50 \n  Installing : redhat-rpm-config-9.1.0-76.el7.centos.noarch               16/50 \n  Installing : libstdc++-devel-4.8.5-16.el7_4.1.x86_64                    17/50 \n  Installing : 1:emacs-filesystem-24.3-20.el7_4.noarch                    18/50 \n  Installing : boost-date-time-1.53.0-27.el7.x86_64                       19/50 \n  Installing : gettext-common-devel-0.19.8.1-2.el7.noarch                 20/50 \n  Installing : gettext-devel-0.19.8.1-2.el7.x86_64                        21/50 \n  Installing : gdb-7.6.1-100.el7_4.1.x86_64                               22/50 \n  Installing : perl-Test-Harness-3.28-3.el7.noarch                        23/50 \n  Installing : automake-1.13.4-3.el7.noarch                               24/50 \n  Installing : elfutils-0.168-8.el7.x86_64                                25/50 \n  Installing : efivar-libs-31-4.el7.x86_64                                26/50 \n  Installing : mokutil-12-1.el7.centos.x86_64                             27/50 \n  Installing : libdwarf-20130207-4.el7.x86_64                             28/50 \n  Installing : dyninst-9.3.1-1.el7.x86_64                                 29/50 \n  Installing : systemtap-runtime-3.1-5.el7_4.x86_64                       30/50 \n  Installing : systemtap-client-3.1-5.el7_4.x86_64                        31/50 \n  Installing : perl-XML-Parser-2.41-10.el7.x86_64                         32/50 \n  Installing : intltool-0.50.2-7.el7.noarch                               33/50 \n  Installing : systemtap-3.1-5.el7_4.x86_64                               34/50 \n  Installing : rpm-build-4.11.3-25.el7.x86_64                             35/50 \n  Installing : libtool-2.4.2-22.el7_3.x86_64                              36/50 \n  Installing : cscope-15.8-10.el7.x86_64                                  37/50 \n  Installing : gcc-c++-4.8.5-16.el7_4.1.x86_64                            38/50 \n  Installing : gcc-gfortran-4.8.5-16.el7_4.1.x86_64                       39/50 \n  Installing : bison-3.0.4-1.el7.x86_64                                   40/50 \n  Installing : flex-2.5.37-3.el7.x86_64                                   41/50 \n  Installing : diffstat-1.57-4.el7.x86_64                                 42/50 \n  Installing : rpm-sign-4.11.3-25.el7.x86_64                              43/50 \n  Installing : indent-2.2.11-13.el7.x86_64                                44/50 \n  Installing : swig-2.0.10-5.el7.x86_64                                   45/50 \n  Installing : rcs-5.9.0-5.el7.x86_64                                     46/50 \n  Installing : patchutils-0.3.3-4.el7.x86_64                              47/50 \n  Installing : 1:doxygen-1.8.5-3.el7.x86_64                               48/50 \n  Installing : byacc-1.9.20130304-3.el7.x86_64                            49/50 \n  Installing : ctags-5.8-13.el7.x86_64                                    50/50 \n  Verifying  : systemtap-client-3.1-5.el7_4.x86_64                         1/50 \n  Verifying  : ctags-5.8-13.el7.x86_64                                     2/50 \n  Verifying  : systemtap-devel-3.1-5.el7_4.x86_64                          3/50 \n  Verifying  : perl-XML-Parser-2.41-10.el7.x86_64                          4/50 \n  Verifying  : gettext-devel-0.19.8.1-2.el7.x86_64                         5/50 \n  Verifying  : byacc-1.9.20130304-3.el7.x86_64                             6/50 \n  Verifying  : libdwarf-20130207-4.el7.x86_64                              7/50 \n  Verifying  : perl-Thread-Queue-3.02-2.el7.noarch                         8/50 \n  Verifying  : boost-system-1.53.0-27.el7.x86_64                           9/50 \n  Verifying  : automake-1.13.4-3.el7.noarch                               10/50 \n  Verifying  : m4-1.4.16-10.el7.x86_64                                    11/50 \n  Verifying  : efivar-libs-31-4.el7.x86_64                                12/50 \n  Verifying  : avahi-libs-0.6.31-17.el7.x86_64                            13/50 \n  Verifying  : elfutils-0.168-8.el7.x86_64                                14/50 \n  Verifying  : 1:doxygen-1.8.5-3.el7.x86_64                               15/50 \n  Verifying  : dyninst-9.3.1-1.el7.x86_64                                 16/50 \n  Verifying  : mokutil-12-1.el7.centos.x86_64                             17/50 \n  Verifying  : libgfortran-4.8.5-16.el7_4.1.x86_64                        18/50 \n  Verifying  : gcc-gfortran-4.8.5-16.el7_4.1.x86_64                       19/50 \n  Verifying  : perl-Test-Harness-3.28-3.el7.noarch                        20/50 \n  Verifying  : gdb-7.6.1-100.el7_4.1.x86_64                               21/50 \n  Verifying  : boost-thread-1.53.0-27.el7.x86_64                          22/50 \n  Verifying  : redhat-rpm-config-9.1.0-76.el7.centos.noarch               23/50 \n  Verifying  : patchutils-0.3.3-4.el7.x86_64                              24/50 \n  Verifying  : patch-2.7.1-8.el7.x86_64                                   25/50 \n  Verifying  : rcs-5.9.0-5.el7.x86_64                                     26/50 \n  Verifying  : swig-2.0.10-5.el7.x86_64                                   27/50 \n  Verifying  : gettext-common-devel-0.19.8.1-2.el7.noarch                 28/50 \n  Verifying  : libtool-2.4.2-22.el7_3.x86_64                              29/50 \n  Verifying  : intltool-0.50.2-7.el7.noarch                               30/50 \n  Verifying  : bison-3.0.4-1.el7.x86_64                                   31/50 \n  Verifying  : boost-date-time-1.53.0-27.el7.x86_64                       32/50 \n  Verifying  : libquadmath-4.8.5-16.el7_4.1.x86_64                        33/50 \n  Verifying  : indent-2.2.11-13.el7.x86_64                                34/50 \n  Verifying  : gcc-c++-4.8.5-16.el7_4.1.x86_64                            35/50 \n  Verifying  : unzip-6.0-16.el7.x86_64                                    36/50 \n  Verifying  : rpm-build-4.11.3-25.el7.x86_64                             37/50 \n  Verifying  : flex-2.5.37-3.el7.x86_64                                   38/50 \n  Verifying  : systemtap-3.1-5.el7_4.x86_64                               39/50 \n  Verifying  : 1:emacs-filesystem-24.3-20.el7_4.noarch                    40/50 \n  Verifying  : cscope-15.8-10.el7.x86_64                                  41/50 \n  Verifying  : rpm-sign-4.11.3-25.el7.x86_64                              42/50 \n  Verifying  : autoconf-2.69-11.el7.noarch                                43/50 \n  Verifying  : zip-3.0-11.el7.x86_64                                      44/50 \n  Verifying  : systemtap-runtime-3.1-5.el7_4.x86_64                       45/50 \n  Verifying  : libstdc++-devel-4.8.5-16.el7_4.1.x86_64                    46/50 \n  Verifying  : dwz-0.11-3.el7.x86_64                                      47/50 \n  Verifying  : diffstat-1.57-4.el7.x86_64                                 48/50 \n  Verifying  : perl-srpm-macros-1-8.el7.noarch                            49/50 \n  Verifying  : libquadmath-devel-4.8.5-16.el7_4.1.x86_64                  50/50 \n\nInstalled:\n  autoconf.noarch 0:2.69-11.el7                                                 \n  automake.noarch 0:1.13.4-3.el7                                                \n  bison.x86_64 0:3.0.4-1.el7                                                    \n  byacc.x86_64 0:1.9.20130304-3.el7                                             \n  cscope.x86_64 0:15.8-10.el7                                                   \n  ctags.x86_64 0:5.8-13.el7                                                     \n  diffstat.x86_64 0:1.57-4.el7                                                  \n  doxygen.x86_64 1:1.8.5-3.el7                                                  \n  elfutils.x86_64 0:0.168-8.el7                                                 \n  flex.x86_64 0:2.5.37-3.el7                                                    \n  gcc-c++.x86_64 0:4.8.5-16.el7_4.1                                             \n  gcc-gfortran.x86_64 0:4.8.5-16.el7_4.1                                        \n  indent.x86_64 0:2.2.11-13.el7                                                 \n  intltool.noarch 0:0.50.2-7.el7                                                \n  libtool.x86_64 0:2.4.2-22.el7_3                                               \n  patch.x86_64 0:2.7.1-8.el7                                                    \n  patchutils.x86_64 0:0.3.3-4.el7                                               \n  rcs.x86_64 0:5.9.0-5.el7                                                      \n  redhat-rpm-config.noarch 0:9.1.0-76.el7.centos                                \n  rpm-build.x86_64 0:4.11.3-25.el7                                              \n  rpm-sign.x86_64 0:4.11.3-25.el7                                               \n  swig.x86_64 0:2.0.10-5.el7                                                    \n  systemtap.x86_64 0:3.1-5.el7_4                                                \n\nDependency Installed:\n  avahi-libs.x86_64 0:0.6.31-17.el7                                             \n  boost-date-time.x86_64 0:1.53.0-27.el7                                        \n  boost-system.x86_64 0:1.53.0-27.el7                                           \n  boost-thread.x86_64 0:1.53.0-27.el7                                           \n  dwz.x86_64 0:0.11-3.el7                                                       \n  dyninst.x86_64 0:9.3.1-1.el7                                                  \n  efivar-libs.x86_64 0:31-4.el7                                                 \n  emacs-filesystem.noarch 1:24.3-20.el7_4                                       \n  gdb.x86_64 0:7.6.1-100.el7_4.1                                                \n  gettext-common-devel.noarch 0:0.19.8.1-2.el7                                  \n  gettext-devel.x86_64 0:0.19.8.1-2.el7                                         \n  libdwarf.x86_64 0:20130207-4.el7                                              \n  libgfortran.x86_64 0:4.8.5-16.el7_4.1                                         \n  libquadmath.x86_64 0:4.8.5-16.el7_4.1                                         \n  libquadmath-devel.x86_64 0:4.8.5-16.el7_4.1                                   \n  libstdc++-devel.x86_64 0:4.8.5-16.el7_4.1                                     \n  m4.x86_64 0:1.4.16-10.el7                                                     \n  mokutil.x86_64 0:12-1.el7.centos                                              \n  perl-Test-Harness.noarch 0:3.28-3.el7                                         \n  perl-Thread-Queue.noarch 0:3.02-2.el7                                         \n  perl-XML-Parser.x86_64 0:2.41-10.el7                                          \n  perl-srpm-macros.noarch 0:1-8.el7                                             \n  systemtap-client.x86_64 0:3.1-5.el7_4                                         \n  systemtap-devel.x86_64 0:3.1-5.el7_4                                          \n  systemtap-runtime.x86_64 0:3.1-5.el7_4                                        \n  unzip.x86_64 0:6.0-16.el7                                                     \n  zip.x86_64 0:3.0-11.el7                                                       \n\nComplete!\n"]}
+ok: [projectx] => (item=gettext) => {"changed": false, "item": "gettext", "msg": "", "rc": 0, "results": ["gettext-0.19.8.1-2.el7.x86_64 providing gettext is already installed"]}
+ok: [projectx] => (item=gcc-c++) => {"changed": false, "item": "gcc-c++", "msg": "", "rc": 0, "results": ["gcc-c++-4.8.5-16.el7_4.1.x86_64 providing gcc-c++ is already installed"]}
+ok: [projectx] => (item=bzip2) => {"changed": false, "item": "bzip2", "msg": "", "rc": 0, "results": ["bzip2-1.0.6-13.el7.x86_64 providing bzip2 is already installed"]}
+
+TASK [geerlingguy.awx : Clone AWX into configured directory.] ******************
+changed: [projectx] => {"after": "3d421cc595a915c3dc571a8545bdc8ec37980ca4", "before": null, "changed": true}
+
+TASK [geerlingguy.awx : Run the AWX installation playbook.] ********************
+changed: [projectx] => {"changed": true, "cmd": ["ansible-playbook", "-i", "inventory", "install.yml"], "delta": "0:04:44.404908", "end": "2018-02-05 14:06:46.120182", "rc": 0, "start": "2018-02-05 14:02:01.715274", "stderr": "", "stderr_lines": [], "stdout": "\nPLAY [Build and deploy AWX] ****************************************************\n\nTASK [check_vars : include_tasks] **********************************************\nskipping: [localhost]\n\nTASK [check_vars : include_tasks] **********************************************\nincluded: /root/awx/installer/check_vars/tasks/check_docker.yml for localhost\n\nTASK [check_vars : postgres_data_dir should be defined] ************************\nok: [localhost] => {\n    \"changed\": false, \n    \"msg\": \"All assertions passed\"\n}\n\nTASK [check_vars : host_port should be defined] ********************************\nok: [localhost] => {\n    \"changed\": false, \n    \"msg\": \"All assertions passed\"\n}\n\nTASK [image_build : Get Version from checkout if not provided] *****************\nskipping: [localhost]\n\nTASK [image_build : Set global version if not provided] ************************\nskipping: [localhost]\n\nTASK [image_build : Verify awx-logos directory exists for official install] ****\nskipping: [localhost]\n\nTASK [image_build : Copy logos for inclusion in sdist] *************************\nskipping: [localhost]\n\nTASK [image_build : Set sdist file name] ***************************************\nskipping: [localhost]\n\nTASK [image_build : AWX Distribution] ******************************************\nskipping: [localhost]\n\nTASK [image_build : Stat distribution file] ************************************\nskipping: [localhost]\n\nTASK [image_build : Clean distribution] ****************************************\nskipping: [localhost]\n\nTASK [image_build : Build sdist builder image] *********************************\nskipping: [localhost]\n\nTASK [image_build : Build AWX distribution using container] ********************\nskipping: [localhost]\n\nTASK [image_build : Build AWX distribution locally] ****************************\nskipping: [localhost]\n\nTASK [image_build : Set docker build base path] ********************************\nskipping: [localhost]\n\nTASK [image_build : Set awx_web image name] ************************************\nskipping: [localhost]\n\nTASK [image_build : Set awx_task image name] ***********************************\nskipping: [localhost]\n\nTASK [image_build : Ensure directory exists] ***********************************\nskipping: [localhost]\n\nTASK [image_build : Stage sdist] ***********************************************\nskipping: [localhost]\n\nTASK [image_build : Template web Dockerfile] ***********************************\nskipping: [localhost]\n\nTASK [image_build : Template task Dockerfile] **********************************\nskipping: [localhost]\n\nTASK [image_build : Stage launch_awx] ******************************************\nskipping: [localhost]\n\nTASK [image_build : Stage launch_awx_task] *************************************\nskipping: [localhost]\n\nTASK [image_build : Stage nginx.conf] ******************************************\nskipping: [localhost]\n\nTASK [image_build : Stage supervisor.conf] *************************************\nskipping: [localhost]\n\nTASK [image_build : Stage supervisor_task.conf] ********************************\nskipping: [localhost]\n\nTASK [image_build : Stage settings.py] *****************************************\nskipping: [localhost]\n\nTASK [image_build : Stage requirements] ****************************************\nskipping: [localhost]\n\nTASK [image_build : Stage config watcher] **************************************\nskipping: [localhost]\n\nTASK [image_build : Stage Makefile] ********************************************\nskipping: [localhost]\n\nTASK [image_build : State ansible repo] ****************************************\nskipping: [localhost]\n\nTASK [image_build : State ansible repo key] ************************************\nskipping: [localhost]\n\nTASK [image_build : Build base web image] **************************************\nskipping: [localhost]\n\nTASK [image_build : Build base task image] *************************************\nskipping: [localhost]\n\nTASK [image_build : Clean docker base directory] *******************************\nskipping: [localhost]\n\nTASK [openshift : Authenticate with OpenShift] *********************************\nskipping: [localhost]\n\nTASK [openshift : Get Project Detail] ******************************************\nskipping: [localhost]\n\nTASK [openshift : Get Postgres Service Detail] *********************************\nskipping: [localhost]\n\nTASK [openshift : Create AWX Openshift Project] ********************************\nskipping: [localhost]\n\nTASK [openshift : Mark Openshift User as Admin] ********************************\nskipping: [localhost]\n\nTASK [openshift : Set docker registry password] ********************************\nskipping: [localhost]\n\nTASK [openshift : Set docker registry password] ********************************\nskipping: [localhost]\n\nTASK [openshift : Authenticate with Docker registry] ***************************\nskipping: [localhost]\n\nTASK [openshift : Wait for Openshift] ******************************************\nskipping: [localhost]\n\nTASK [openshift : Tag and push web image to registry] **************************\nskipping: [localhost]\n\nTASK [openshift : Wait for the registry to settle] *****************************\nskipping: [localhost]\n\nTASK [openshift : Tag and push task image to registry] *************************\nskipping: [localhost]\n\nTASK [openshift : Enable image stream lookups for awx images] ******************\nskipping: [localhost]\n\nTASK [openshift : Set full web image path] *************************************\nskipping: [localhost]\n\nTASK [openshift : Set full task image path] ************************************\nskipping: [localhost]\n\nTASK [openshift : Set DockerHub Image Paths] ***********************************\nskipping: [localhost]\n\nTASK [openshift : Deploy and Activate Postgres] ********************************\nskipping: [localhost]\n\nTASK [openshift : Wait for Postgres to activate] *******************************\nskipping: [localhost]\n\nTASK [openshift : Set openshift base path] *************************************\nskipping: [localhost]\n\nTASK [openshift : Ensure directory exists] *************************************\nskipping: [localhost]\n\nTASK [openshift : Template Openshift AWX Config] *******************************\nskipping: [localhost]\n\nTASK [openshift : Template Openshift AWX Deployment] ***************************\nskipping: [localhost]\n\nTASK [openshift : Template Openshift AWX etcd2] ********************************\nskipping: [localhost]\n\nTASK [openshift : Apply etcd deployment] ***************************************\nskipping: [localhost]\n\nTASK [openshift : Apply Configmap] *********************************************\nskipping: [localhost]\n\nTASK [openshift : Apply Deployment] ********************************************\nskipping: [localhost]\n\nTASK [kubernetes : Set the Kubernetes Context] *********************************\nskipping: [localhost]\n\nTASK [kubernetes : Get Namespace Detail] ***************************************\nskipping: [localhost]\n\nTASK [kubernetes : Get Postgres Service Detail] ********************************\nskipping: [localhost]\n\nTASK [kubernetes : Create AWX Kubernetes Project] ******************************\nskipping: [localhost]\n\nTASK [kubernetes : Authenticate with Docker registry] **************************\nskipping: [localhost]\n\nTASK [kubernetes : Wait for Openshift] *****************************************\nskipping: [localhost]\n\nTASK [kubernetes : Tag and push web image to registry] *************************\nskipping: [localhost]\n\nTASK [kubernetes : Wait for the registry to settle] ****************************\nskipping: [localhost]\n\nTASK [kubernetes : Tag and push task image to registry] ************************\nskipping: [localhost]\n\nTASK [kubernetes : Set full web image path] ************************************\nskipping: [localhost]\n\nTASK [kubernetes : Set full task image path] ***********************************\nskipping: [localhost]\n\nTASK [kubernetes : Set DockerHub Image Paths] **********************************\nskipping: [localhost]\n\nTASK [kubernetes : Deploy and Activate Postgres] *******************************\nskipping: [localhost]\n\nTASK [kubernetes : Set postgresql hostname to helm package service] ************\nskipping: [localhost]\n\nTASK [kubernetes : Wait for Postgres to activate] ******************************\nskipping: [localhost]\n\nTASK [kubernetes : Set kubernetes base path] ***********************************\nskipping: [localhost]\n\nTASK [kubernetes : Ensure directory exists] ************************************\nskipping: [localhost]\n\nTASK [kubernetes : Template Kubernetes AWX etcd2] ******************************\nskipping: [localhost]\n\nTASK [kubernetes : Template Kubernetes AWX Config] *****************************\nskipping: [localhost]\n\nTASK [kubernetes : Template Kubernetes AWX Deployment] *************************\nskipping: [localhost]\n\nTASK [kubernetes : Apply etcd deployment] **************************************\nskipping: [localhost]\n\nTASK [kubernetes : Apply Configmap] ********************************************\nskipping: [localhost]\n\nTASK [kubernetes : Apply Deployment] *******************************************\nskipping: [localhost]\n\nTASK [local_docker : Export Docker web image if it isnt local and there isnt a registry defined] ***\nskipping: [localhost]\n\nTASK [local_docker : Export Docker task image if it isnt local and there isnt a registry defined] ***\nskipping: [localhost]\n\nTASK [local_docker : Authenticate with Docker registry if registry password given] ***\nskipping: [localhost]\n\nTASK [local_docker : Set docker base path] *************************************\nskipping: [localhost]\n\nTASK [local_docker : Ensure directory exists] **********************************\nskipping: [localhost]\n\nTASK [local_docker : Copy web image to docker execution] ***********************\nskipping: [localhost]\n\nTASK [local_docker : Copy task image to docker execution] **********************\nskipping: [localhost]\n\nTASK [local_docker : Load web image] *******************************************\nskipping: [localhost]\n\nTASK [local_docker : Load task image] ******************************************\nskipping: [localhost]\n\nTASK [local_docker : include_role] *********************************************\nskipping: [localhost]\n\nTASK [local_docker : Set full image path for local install] ********************\nskipping: [localhost]\n\nTASK [local_docker : Set DockerHub Image Paths] ********************************\nok: [localhost]\n\nTASK [local_docker : Activate postgres container] ******************************\nchanged: [localhost]\n\nTASK [local_docker : Activate rabbitmq container] ******************************\nchanged: [localhost]\n\nTASK [local_docker : Activate memcached container] *****************************\nchanged: [localhost]\n\nTASK [local_docker : Wait for postgres and rabbitmq to activate] ***************\nPausing for 15 seconds\n(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)\r\nok: [localhost]\n\nTASK [local_docker : Set properties without postgres for awx_web] **************\nskipping: [localhost]\n\nTASK [local_docker : Set properties with postgres for awx_web] *****************\nok: [localhost]\n\nTASK [local_docker : Set properties without postgres for awx_task] *************\nskipping: [localhost]\n\nTASK [local_docker : Set properties with postgres for awx_task] ****************\nok: [localhost]\n\nTASK [local_docker : Activate AWX Web Container] *******************************\nchanged: [localhost]\n\nTASK [local_docker : Activate AWX Task Container] ******************************\nchanged: [localhost]\n\nTASK [local_docker : Create /var/lib/awx directory] ****************************\nskipping: [localhost]\n\nTASK [local_docker : Create docker-compose.yml file] ***************************\nskipping: [localhost]\n\nTASK [local_docker : Start the containers] *************************************\nskipping: [localhost]\n\nPLAY RECAP *********************************************************************\nlocalhost                  : ok=12   changed=5    unreachable=0    failed=0   ", "stdout_lines": ["", "PLAY [Build and deploy AWX] ****************************************************", "", "TASK [check_vars : include_tasks] **********************************************", "skipping: [localhost]", "", "TASK [check_vars : include_tasks] **********************************************", "included: /root/awx/installer/check_vars/tasks/check_docker.yml for localhost", "", "TASK [check_vars : postgres_data_dir should be defined] ************************", "ok: [localhost] => {", "    \"changed\": false, ", "    \"msg\": \"All assertions passed\"", "}", "", "TASK [check_vars : host_port should be defined] ********************************", "ok: [localhost] => {", "    \"changed\": false, ", "    \"msg\": \"All assertions passed\"", "}", "", "TASK [image_build : Get Version from checkout if not provided] *****************", "skipping: [localhost]", "", "TASK [image_build : Set global version if not provided] ************************", "skipping: [localhost]", "", "TASK [image_build : Verify awx-logos directory exists for official install] ****", "skipping: [localhost]", "", "TASK [image_build : Copy logos for inclusion in sdist] *************************", "skipping: [localhost]", "", "TASK [image_build : Set sdist file name] ***************************************", "skipping: [localhost]", "", "TASK [image_build : AWX Distribution] ******************************************", "skipping: [localhost]", "", "TASK [image_build : Stat distribution file] ************************************", "skipping: [localhost]", "", "TASK [image_build : Clean distribution] ****************************************", "skipping: [localhost]", "", "TASK [image_build : Build sdist builder image] *********************************", "skipping: [localhost]", "", "TASK [image_build : Build AWX distribution using container] ********************", "skipping: [localhost]", "", "TASK [image_build : Build AWX distribution locally] ****************************", "skipping: [localhost]", "", "TASK [image_build : Set docker build base path] ********************************", "skipping: [localhost]", "", "TASK [image_build : Set awx_web image name] ************************************", "skipping: [localhost]", "", "TASK [image_build : Set awx_task image name] ***********************************", "skipping: [localhost]", "", "TASK [image_build : Ensure directory exists] ***********************************", "skipping: [localhost]", "", "TASK [image_build : Stage sdist] ***********************************************", "skipping: [localhost]", "", "TASK [image_build : Template web Dockerfile] ***********************************", "skipping: [localhost]", "", "TASK [image_build : Template task Dockerfile] **********************************", "skipping: [localhost]", "", "TASK [image_build : Stage launch_awx] ******************************************", "skipping: [localhost]", "", "TASK [image_build : Stage launch_awx_task] *************************************", "skipping: [localhost]", "", "TASK [image_build : Stage nginx.conf] ******************************************", "skipping: [localhost]", "", "TASK [image_build : Stage supervisor.conf] *************************************", "skipping: [localhost]", "", "TASK [image_build : Stage supervisor_task.conf] ********************************", "skipping: [localhost]", "", "TASK [image_build : Stage settings.py] *****************************************", "skipping: [localhost]", "", "TASK [image_build : Stage requirements] ****************************************", "skipping: [localhost]", "", "TASK [image_build : Stage config watcher] **************************************", "skipping: [localhost]", "", "TASK [image_build : Stage Makefile] ********************************************", "skipping: [localhost]", "", "TASK [image_build : State ansible repo] ****************************************", "skipping: [localhost]", "", "TASK [image_build : State ansible repo key] ************************************", "skipping: [localhost]", "", "TASK [image_build : Build base web image] **************************************", "skipping: [localhost]", "", "TASK [image_build : Build base task image] *************************************", "skipping: [localhost]", "", "TASK [image_build : Clean docker base directory] *******************************", "skipping: [localhost]", "", "TASK [openshift : Authenticate with OpenShift] *********************************", "skipping: [localhost]", "", "TASK [openshift : Get Project Detail] ******************************************", "skipping: [localhost]", "", "TASK [openshift : Get Postgres Service Detail] *********************************", "skipping: [localhost]", "", "TASK [openshift : Create AWX Openshift Project] ********************************", "skipping: [localhost]", "", "TASK [openshift : Mark Openshift User as Admin] ********************************", "skipping: [localhost]", "", "TASK [openshift : Set docker registry password] ********************************", "skipping: [localhost]", "", "TASK [openshift : Set docker registry password] ********************************", "skipping: [localhost]", "", "TASK [openshift : Authenticate with Docker registry] ***************************", "skipping: [localhost]", "", "TASK [openshift : Wait for Openshift] ******************************************", "skipping: [localhost]", "", "TASK [openshift : Tag and push web image to registry] **************************", "skipping: [localhost]", "", "TASK [openshift : Wait for the registry to settle] *****************************", "skipping: [localhost]", "", "TASK [openshift : Tag and push task image to registry] *************************", "skipping: [localhost]", "", "TASK [openshift : Enable image stream lookups for awx images] ******************", "skipping: [localhost]", "", "TASK [openshift : Set full web image path] *************************************", "skipping: [localhost]", "", "TASK [openshift : Set full task image path] ************************************", "skipping: [localhost]", "", "TASK [openshift : Set DockerHub Image Paths] ***********************************", "skipping: [localhost]", "", "TASK [openshift : Deploy and Activate Postgres] ********************************", "skipping: [localhost]", "", "TASK [openshift : Wait for Postgres to activate] *******************************", "skipping: [localhost]", "", "TASK [openshift : Set openshift base path] *************************************", "skipping: [localhost]", "", "TASK [openshift : Ensure directory exists] *************************************", "skipping: [localhost]", "", "TASK [openshift : Template Openshift AWX Config] *******************************", "skipping: [localhost]", "", "TASK [openshift : Template Openshift AWX Deployment] ***************************", "skipping: [localhost]", "", "TASK [openshift : Template Openshift AWX etcd2] ********************************", "skipping: [localhost]", "", "TASK [openshift : Apply etcd deployment] ***************************************", "skipping: [localhost]", "", "TASK [openshift : Apply Configmap] *********************************************", "skipping: [localhost]", "", "TASK [openshift : Apply Deployment] ********************************************", "skipping: [localhost]", "", "TASK [kubernetes : Set the Kubernetes Context] *********************************", "skipping: [localhost]", "", "TASK [kubernetes : Get Namespace Detail] ***************************************", "skipping: [localhost]", "", "TASK [kubernetes : Get Postgres Service Detail] ********************************", "skipping: [localhost]", "", "TASK [kubernetes : Create AWX Kubernetes Project] ******************************", "skipping: [localhost]", "", "TASK [kubernetes : Authenticate with Docker registry] **************************", "skipping: [localhost]", "", "TASK [kubernetes : Wait for Openshift] *****************************************", "skipping: [localhost]", "", "TASK [kubernetes : Tag and push web image to registry] *************************", "skipping: [localhost]", "", "TASK [kubernetes : Wait for the registry to settle] ****************************", "skipping: [localhost]", "", "TASK [kubernetes : Tag and push task image to registry] ************************", "skipping: [localhost]", "", "TASK [kubernetes : Set full web image path] ************************************", "skipping: [localhost]", "", "TASK [kubernetes : Set full task image path] ***********************************", "skipping: [localhost]", "", "TASK [kubernetes : Set DockerHub Image Paths] **********************************", "skipping: [localhost]", "", "TASK [kubernetes : Deploy and Activate Postgres] *******************************", "skipping: [localhost]", "", "TASK [kubernetes : Set postgresql hostname to helm package service] ************", "skipping: [localhost]", "", "TASK [kubernetes : Wait for Postgres to activate] ******************************", "skipping: [localhost]", "", "TASK [kubernetes : Set kubernetes base path] ***********************************", "skipping: [localhost]", "", "TASK [kubernetes : Ensure directory exists] ************************************", "skipping: [localhost]", "", "TASK [kubernetes : Template Kubernetes AWX etcd2] ******************************", "skipping: [localhost]", "", "TASK [kubernetes : Template Kubernetes AWX Config] *****************************", "skipping: [localhost]", "", "TASK [kubernetes : Template Kubernetes AWX Deployment] *************************", "skipping: [localhost]", "", "TASK [kubernetes : Apply etcd deployment] **************************************", "skipping: [localhost]", "", "TASK [kubernetes : Apply Configmap] ********************************************", "skipping: [localhost]", "", "TASK [kubernetes : Apply Deployment] *******************************************", "skipping: [localhost]", "", "TASK [local_docker : Export Docker web image if it isnt local and there isnt a registry defined] ***", "skipping: [localhost]", "", "TASK [local_docker : Export Docker task image if it isnt local and there isnt a registry defined] ***", "skipping: [localhost]", "", "TASK [local_docker : Authenticate with Docker registry if registry password given] ***", "skipping: [localhost]", "", "TASK [local_docker : Set docker base path] *************************************", "skipping: [localhost]", "", "TASK [local_docker : Ensure directory exists] **********************************", "skipping: [localhost]", "", "TASK [local_docker : Copy web image to docker execution] ***********************", "skipping: [localhost]", "", "TASK [local_docker : Copy task image to docker execution] **********************", "skipping: [localhost]", "", "TASK [local_docker : Load web image] *******************************************", "skipping: [localhost]", "", "TASK [local_docker : Load task image] ******************************************", "skipping: [localhost]", "", "TASK [local_docker : include_role] *********************************************", "skipping: [localhost]", "", "TASK [local_docker : Set full image path for local install] ********************", "skipping: [localhost]", "", "TASK [local_docker : Set DockerHub Image Paths] ********************************", "ok: [localhost]", "", "TASK [local_docker : Activate postgres container] ******************************", "changed: [localhost]", "", "TASK [local_docker : Activate rabbitmq container] ******************************", "changed: [localhost]", "", "TASK [local_docker : Activate memcached container] *****************************", "changed: [localhost]", "", "TASK [local_docker : Wait for postgres and rabbitmq to activate] ***************", "Pausing for 15 seconds", "(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)", "ok: [localhost]", "", "TASK [local_docker : Set properties without postgres for awx_web] **************", "skipping: [localhost]", "", "TASK [local_docker : Set properties with postgres for awx_web] *****************", "ok: [localhost]", "", "TASK [local_docker : Set properties without postgres for awx_task] *************", "skipping: [localhost]", "", "TASK [local_docker : Set properties with postgres for awx_task] ****************", "ok: [localhost]", "", "TASK [local_docker : Activate AWX Web Container] *******************************", "changed: [localhost]", "", "TASK [local_docker : Activate AWX Task Container] ******************************", "changed: [localhost]", "", "TASK [local_docker : Create /var/lib/awx directory] ****************************", "skipping: [localhost]", "", "TASK [local_docker : Create docker-compose.yml file] ***************************", "skipping: [localhost]", "", "TASK [local_docker : Start the containers] *************************************", "skipping: [localhost]", "", "PLAY RECAP *********************************************************************", "localhost                  : ok=12   changed=5    unreachable=0    failed=0   "]}
+
+TASK [geerlingguy.awx : Create a file to mark whether this playbook has completed.] ***
+ok: [projectx] => {"changed": false, "dest": "/etc/awx_playbook_complete", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "secontext": "unconfined_u:object_r:etc_t:s0", "size": 0, "state": "file", "uid": 0}
+
+TASK [directory] ***************************************************************
+changed: [projectx] => {"changed": true, "cmd": ["pwd"], "delta": "0:00:00.017772", "end": "2018-02-05 14:06:47.211217", "rc": 0, "start": "2018-02-05 14:06:47.193445", "stderr": "", "stderr_lines": [], "stdout": "/vagrant/shared/ansible", "stdout_lines": ["/vagrant/shared/ansible"]}
+
+TASK [debug] *******************************************************************
+ok: [projectx] => {
+    "msg": "/vagrant/shared/ansible"
+}
+
+TASK [debug] *******************************************************************
+ok: [projectx] => {
+    "msg": ""
+}
+
+TASK [Copy certificates to /home/vagrant/.ssh] *********************************
+changed: [projectx] => {"changed": true, "cmd": "cp -fuv /home/vagrant/shared/certificates/*.pem /home/vagrant/.ssh", "delta": "0:00:00.077683", "end": "2018-02-05 14:06:47.894444", "rc": 0, "start": "2018-02-05 14:06:47.816761", "stderr": "", "stderr_lines": [], "stdout": "‘/home/vagrant/shared/certificates/MarkH-EC2-KeyPair.pem’ -> ‘/home/vagrant/.ssh/MarkH-EC2-KeyPair.pem’\n‘/home/vagrant/shared/certificates/markh-training-keypair.pem’ -> ‘/home/vagrant/.ssh/markh-training-keypair.pem’\n‘/home/vagrant/shared/certificates/mh-uk-1a.pem’ -> ‘/home/vagrant/.ssh/mh-uk-1a.pem’\n‘/home/vagrant/shared/certificates/mh-uk-1b.pem’ -> ‘/home/vagrant/.ssh/mh-uk-1b.pem’", "stdout_lines": ["‘/home/vagrant/shared/certificates/MarkH-EC2-KeyPair.pem’ -> ‘/home/vagrant/.ssh/MarkH-EC2-KeyPair.pem’", "‘/home/vagrant/shared/certificates/markh-training-keypair.pem’ -> ‘/home/vagrant/.ssh/markh-training-keypair.pem’", "‘/home/vagrant/shared/certificates/mh-uk-1a.pem’ -> ‘/home/vagrant/.ssh/mh-uk-1a.pem’", "‘/home/vagrant/shared/certificates/mh-uk-1b.pem’ -> ‘/home/vagrant/.ssh/mh-uk-1b.pem’"]}
+
+TASK [debug] *******************************************************************
+ok: [projectx] => {
+    "msg": "‘/home/vagrant/shared/certificates/MarkH-EC2-KeyPair.pem’ -> ‘/home/vagrant/.ssh/MarkH-EC2-KeyPair.pem’\n‘/home/vagrant/shared/certificates/markh-training-keypair.pem’ -> ‘/home/vagrant/.ssh/markh-training-keypair.pem’\n‘/home/vagrant/shared/certificates/mh-uk-1a.pem’ -> ‘/home/vagrant/.ssh/mh-uk-1a.pem’\n‘/home/vagrant/shared/certificates/mh-uk-1b.pem’ -> ‘/home/vagrant/.ssh/mh-uk-1b.pem’"
+}
+
+TASK [debug] *******************************************************************
+ok: [projectx] => {
+    "msg": ""
+}
+
+TASK [Own certificates] ********************************************************
+changed: [projectx] => {"changed": true, "cmd": "chown vagrant:vagrant /home/vagrant/.ssh/*.pem", "delta": "0:00:00.018961", "end": "2018-02-05 14:06:48.512124", "rc": 0, "start": "2018-02-05 14:06:48.493163", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+
+TASK [Set permissions on certificates /home/vagrant/.ssh] **********************
+ [WARNING]: Consider using file module with owner rather than running chown
+changed: [projectx] => {"changed": true, "cmd": "chmod 600 /home/vagrant/.ssh/*.pem", "delta": "0:00:00.110252", "end": "2018-02-05 14:06:49.167622", "rc": 0, "start": "2018-02-05 14:06:49.057370", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+
+TASK [Copy motd] ***************************************************************
+ [WARNING]: Consider using file module with mode rather than running chmod
+changed: [projectx] => {"changed": true, "cmd": "cp -fuv /home/vagrant/shared/ansible/files/motd.sh /etc/profile.d", "delta": "0:00:00.039679", "end": "2018-02-05 14:06:49.692669", "rc": 0, "start": "2018-02-05 14:06:49.652990", "stderr": "", "stderr_lines": [], "stdout": "‘/home/vagrant/shared/ansible/files/motd.sh’ -> ‘/etc/profile.d/motd.sh’", "stdout_lines": ["‘/home/vagrant/shared/ansible/files/motd.sh’ -> ‘/etc/profile.d/motd.sh’"]}
+
+PLAY RECAP *********************************************************************
+projectx                   : ok=36   changed=23   unreachable=0    failed=0   
+
