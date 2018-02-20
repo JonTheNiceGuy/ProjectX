@@ -15,8 +15,8 @@ then
     sudo docker start postgres
     sudo docker restart memcached
     sudo docker restart rabbitmq
-    sudo docker restart awx_task
     sudo docker start awx_web
+    sudo docker restart awx_task
 else
     echo "/vagrant/awx/pgdata does not exist"
     echo "Not attempting AWX DB restore. Treating as a fresh install."
