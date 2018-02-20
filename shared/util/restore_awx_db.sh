@@ -15,6 +15,7 @@ then
     sudo docker start postgres
     sudo docker restart memcached
     sudo docker restart rabbitmq
+    sudo docker restart awx_task
     sudo docker start awx_web
 else
     echo "/vagrant/awx/pgdata does not exist"
