@@ -9,7 +9,7 @@
 #
 #
 ######################################################################
-- name: Python dev machine including Robot Framework
+- name: AWX control machine
   hosts: "{{ servers }}"
   become: Yes
   become_user: root
@@ -33,7 +33,7 @@
     - geerlingguy.docker
     - geerlingguy.pip
     - geerlingguy.nodejs
-    - geerlingguy.awx  
+    - ansible-role-awx  
 
   tasks:
 # Copy certificates from shared certificate directory to ~/.ssh directory
@@ -58,7 +58,8 @@
         shell: chmod 600 /home/vagrant/.ssh/*.pem
       - name: Copy motd
         shell: cp -fuv /home/vagrant/shared/ansible/files/motd.sh /etc/profile.d
-
+      - name: Set permissions on DB files
+        shell: /vagrant/shared/util/restore_awx_db.sh
 #################
 # DEBUG PATTERN #
 #################

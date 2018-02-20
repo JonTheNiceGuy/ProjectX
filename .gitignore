@@ -7,3 +7,9 @@ id_rsa
 id_rsa.pub
 /shared/ansible/files/.Xauthority
 .vagrant
+/shared/ansible/roles
+/awx/pg*
+/log
+
+/shared/ansible/site.retry
+/shared/ansible/site.yml~

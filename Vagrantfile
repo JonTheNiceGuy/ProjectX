@@ -22,36 +22,10 @@ ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
 
-  ##CI/CD VM
-  config.vm.define "cicd" do |cicd|
-    cicd.vm.box = "centos/7"
-    cicd.vm.hostname = 'cicd'
-
-    cicd.vm.network :private_network, ip: "192.168.100.102"
-    cicd.vm.network :forwarded_port, guest: 22, host: 10222, id: "ssh"
-
-    cicd.vm.provider :virtualbox do |v|
-      v.customize ["modifyvm", :id, "--name", "cicd"]
-      v.customize ["modifyvm", :id, "--memory", 2048]
-      v.customize ["modifyvm", :id, "--description", "CI/CD server - jenkins & nexus"]
-      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]	#turn on host DNS resolver
-      v.customize ["modifyvm", :id, "--natdnsproxy1", "off"]			#turn on DNS on VM in case of host dns problem
-  	  v.customize ['modifyvm', :id, '--cableconnected1', 'on']		#make sure "cables connected for VM network interfaces
-    end
-
-	#map shared directory
-	  cicd.vm.synced_folder "shared", "/home/vagrant/shared", type: "virtualbox"
-	  cicd.vm.synced_folder "shared", "/home/vagrant/cicd", type: "virtualbox"
-	##run info script
-    cicd.vm.provision "info", type: "shell", path: "scripts/vminfo.sh"  
-	##run ssh-key setup script
-    cicd.vm.provision "info", type: "shell", path: "scripts/ssh-keys.sh"  
-
-  end
-
-  ##awx VM
+##awx VM
   config.vm.define "awx" do |awx|
-    awx.vm.box = "centos/7"
+    #awx.vm.box = "centos/7"
+    awx.vm.box = "bento/centos-7.4"
     awx.vm.hostname = 'awx'
 
     awx.vm.network :private_network, ip: "192.168.100.101"
@@ -61,7 +35,7 @@ Vagrant.configure("2") do |config|
 	#VirtualBox configuration
     awx.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--name", "awx"]
-      v.customize ["modifyvm", :id, "--memory", 1024]
+      v.customize ["modifyvm", :id, "--memory", 2048]
       v.customize ["modifyvm", :id, "--description", "AWX/Tower server"]
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]	#turn on host DNS resolver
       v.customize ["modifyvm", :id, "--natdnsproxy1", "off"]			#turn on DNS on VM in case of host dns problem
@@ -71,8 +45,13 @@ Vagrant.configure("2") do |config|
     end
 
 	#map shared directory
-	awx.vm.synced_folder "shared", "/home/vagrant/shared", type: "virtualbox"
-	awx.vm.synced_folder "awx", "/home/vagrant/shared", type: "virtualbox"
+###built with
+  #awx.vm.synced_folder "shared", "/home/vagrant/shared", type: "virtualbox"
+  #awx.vm.synced_folder "awx", "/home/vagrant/shared", type: "virtualbox"
+  awx.vm.synced_folder "shared", "/home/vagrant/shared"
+  #map to tmp while unpodified amx role stores its db
+  #awx.vm.synced_folder "awx/", "/tmp/pgdocker"
+
 
 	awx.vm.provision "shell", inline: <<-SHELL
 		ls -al shared
@@ -103,8 +82,63 @@ Vagrant.configure("2") do |config|
 		ansible.playbook = "shared/ansible/site.yml"
     end
 
+	#map to modified awx role data store directory
+  #  awx.vm.synced_folder "awx/", "/opt/awx"
+
+	  # backup up GUEST DB files before the guest is destroyed
+    config.trigger.before :destroy, :vm => ["awx"] do
+      run_remote "pwd"
+      run_remote "shared/util/backup_awx_db.sh"
+    end
+	  # clean up HOST files on the host after the guest is destroyed
+    config.trigger.after :destroy do
+      run "scripts\\reset_known_hosts.bat"
+    end
   end
 
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+
+#CICD provisioning to be carried out by AWX
+#
+#!!there may well be a timing issue here?
+#
+
+  ##CI/CD VM
+  config.vm.define "cicd" do |cicd|
+    cicd.vm.box = "bento/centos-7.4"
+    cicd.vm.hostname = 'cicd'
+
+    cicd.vm.network :private_network, ip: "192.168.100.102"
+    cicd.vm.network :forwarded_port, guest: 22, host: 10222, id: "ssh"
+
+    cicd.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--name", "cicd"]
+      v.customize ["modifyvm", :id, "--memory", 2048]
+      v.customize ["modifyvm", :id, "--description", "CI/CD server - jenkins & nexus"]
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]	#turn on host DNS resolver
+      v.customize ["modifyvm", :id, "--natdnsproxy1", "off"]			#turn on DNS on VM in case of host dns problem
+  	  v.customize ['modifyvm', :id, '--cableconnected1', 'on']		#make sure "cables connected for VM network interfaces
+    end
+
+	#map shared directory
+	  #cicd.vm.synced_folder "shared", "/home/vagrant/shared", type: "virtualbox"
+	  #cicd.vm.synced_folder "shared", "/home/vagrant/cicd", type: "virtualbox"
+	  cicd.vm.synced_folder "shared", "/home/vagrant/shared", type: "nfs", linux__nfs_options: ['rw','no_subtree_check','all_squash','async']
+	  cicd.vm.synced_folder "shared", "/home/vagrant/cicd", type: "nfs", linux__nfs_options: ['rw','no_subtree_check','all_squash','async']
+	##run info script
+    cicd.vm.provision "info", type: "shell", path: "scripts/vminfo.sh"  
+	##run ssh-key setup script
+    cicd.vm.provision "info", type: "shell", path: "scripts/ssh-keys.sh"  
+
+  end
+
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+
+  
   # clean up files on the host after the guest is destroyed
   config.trigger.after :destroy do
     run "scripts\\reset_known_hosts.bat"
