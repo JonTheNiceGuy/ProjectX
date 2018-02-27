@@ -1,5 +1,8 @@
-/shared/certificates/known_hosts
-/shared/certificates/authorized_keys
+#.gitignore file for Project X [Vagrant]
+# Mark Higginbottom
+#somedir/[^empty.txt]* ignore everything in somedir directory except for empty.txt file
+#
+/shared/certificates/[^empty.txt]*
 *.pem
 known_hosts
 authorized_keys
@@ -10,6 +13,6 @@ id_rsa.pub
 /shared/ansible/roles
 /awx/pg*
 /log
-
+/cicd/[^empty.txt]*
 /shared/ansible/site.retry
 /shared/ansible/site.yml~

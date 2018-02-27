@@ -87,7 +87,6 @@ Vagrant.configure("2") do |config|
 
 	  # backup up GUEST DB files before the guest is destroyed
     config.trigger.before :destroy, :vm => ["awx"] do
-      run_remote "pwd"
       run_remote "shared/util/backup_awx_db.sh"
     end
 	  # clean up HOST files on the host after the guest is destroyed
@@ -133,7 +132,10 @@ Vagrant.configure("2") do |config|
     cicd.vm.provision "info", type: "shell", path: "scripts/ssh-keys.sh"  
 
   end
-
+  # backup up GUEST DB files before the guest is destroyed
+  config.trigger.before :destroy, :vm => ["cicd"] do
+    run_remote "shared/util/backup_jenkins_db.sh"
+  end
 ####################################################################################################################
 ####################################################################################################################
 ####################################################################################################################
