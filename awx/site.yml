@@ -36,31 +36,32 @@
     - ansible-role-awx  
     - jontheniceguy.simple-nginx-tls-reverse-proxy
 
-  tasks:
 # Copy certificates from shared certificate directory to ~/.ssh directory
 # This is the correct place for them and also because windows permissions messes
 # up the SHARED file permissions so that the certificates are refused.
 # NOTE: use shell module as command cannot do wildcards i.e. *
-      - name: directory
-        command: pwd
-        register: dir_out
-      - debug: msg="{{ dir_out.stdout }}"
-      - debug: msg="{{ dir_out.stderr }}"
-      - name: Copy certificates to /home/vagrant/.ssh
-        shell: cp -fuv /home/vagrant/shared/certificates/*.pem /home/vagrant/.ssh
+#
+# This part has been commented out, as I can't see why there's a requirement to add
+# PEM files to the outer .ssh directory - these aren't accessible to the docker
+# container that is running AWX :(
+#
+#  tasks:
+#      - name: directory
+#        command: pwd
+#        register: dir_out
+#      - name: Copy certificates to /home/vagrant/.ssh
+#        shell: cp -fuv /home/vagrant/shared/certificates/*.pem /home/vagrant/.ssh
 #        args:
 #          chdir: /vagrant
-        register: move_result
-      - debug: msg="{{ move_result.stdout }}"
-      - debug: msg="{{ move_result.stderr }}"
-      - name: Own certificates
-        shell: chown vagrant:vagrant /home/vagrant/.ssh/*.pem
-      - name: Set permissions on certificates /home/vagrant/.ssh
-        shell: chmod 600 /home/vagrant/.ssh/*.pem
-      - name: Copy motd
-        shell: cp -fuv /home/vagrant/shared/ansible/files/motd.sh /etc/profile.d
-      - name: Set permissions on DB files
-        shell: /vagrant/shared/util/restore_awx_db.sh
+#        register: move_result
+#      - name: Own certificates
+#        shell: chown vagrant:vagrant /home/vagrant/.ssh/*.pem
+#      - name: Set permissions on certificates /home/vagrant/.ssh
+#        shell: chmod 600 /home/vagrant/.ssh/*.pem
+#      - name: Copy motd
+#        shell: cp -fuv /home/vagrant/shared/ansible/files/motd.sh /etc/profile.d
+#      - name: Set permissions on DB files
+#        shell: /vagrant/shared/util/restore_awx_db.sh
 #################
 # DEBUG PATTERN #
 #################
