@@ -16,3 +16,4 @@ id_rsa.pub
 /cicd/[^empty.txt]*
 /shared/ansible/site.retry
 /shared/ansible/site.yml~
+awx-postgres/*
