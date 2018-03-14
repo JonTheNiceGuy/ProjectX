@@ -5,4 +5,4 @@
 - src: geerlingguy.docker #Docker
 - src: geerlingguy.pip #Python Pip
 - src: geerlingguy.nodejs #Node.js (6.x)
-- src: jontheniceguy.simple-nginx-tls-reverse-proxy
+- src: JonTheNiceGuy.simple-nginx-tls-reverse-proxy
