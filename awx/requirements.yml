@@ -5,5 +5,4 @@
 - src: geerlingguy.docker #Docker
 - src: geerlingguy.pip #Python Pip
 - src: geerlingguy.nodejs #Node.js (6.x)
-#Modified to move pgdata. do not use role download 8/2/18
-#- src: geerlingguy.awx #AWX
+- src: jontheniceguy.simple-nginx-tls-reverse-proxy

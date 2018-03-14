@@ -1,9 +1,9 @@
 ---
 ######################################################################
 #
-# Mark Higginbottom
+# Mark Higginbottom / Jon Spriggs
 #
-# 05/12/2016
+# 05/12/2016 - 13/03/2018
 #
 # Playbook to configure a centos7 vm with AWX
 #
@@ -34,6 +34,7 @@
     - geerlingguy.pip
     - geerlingguy.nodejs
     - ansible-role-awx  
+    - jontheniceguy.simple-nginx-tls-reverse-proxy
 
   tasks:
 # Copy certificates from shared certificate directory to ~/.ssh directory
