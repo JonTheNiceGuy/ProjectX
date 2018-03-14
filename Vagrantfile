@@ -54,8 +54,8 @@ Vagrant.configure("2") do |config|
       ansible.verbose = "true"
       ansible.install = "true"
       ansible.extra_vars = {servers: "awx"} #inject the name of the server we want to apply this ansible config to.
-      ansible.galaxy_role_file = "shared/ansible/requirements.yml" #pre-provision any ansible roles before running the main playbook
-      ansible.playbook = "shared/ansible/site.yml"
+      ansible.galaxy_role_file = "awx/requirements.yml" #pre-provision any ansible roles before running the main playbook
+      ansible.playbook = "awx/site.yml"
     end
   end
 
