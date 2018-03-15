@@ -33,8 +33,8 @@
     - geerlingguy.docker
     - geerlingguy.pip
     - geerlingguy.nodejs
-    - ansible-role-awx  
     - JonTheNiceGuy.simple-nginx-tls-reverse-proxy
+    - ansible-role-awx
 
 # Copy certificates from shared certificate directory to ~/.ssh directory
 # This is the correct place for them and also because windows permissions messes

@@ -28,23 +28,25 @@ Vagrant.configure("2") do |config|
       v.customize ["modifyvm", :id, "--memory", 2048]
       v.customize ["modifyvm", :id, "--description", "AWX/Tower server"]
       v.customize ['sharedfolder', 'add', :id, '--name', 'awx-postgres', '--hostpath', File.dirname(__FILE__) + "/awx-postgres"]
+      v.customize ['sharedfolder', 'add', :id, '--name', 'awx-projects', '--hostpath', File.dirname(__FILE__) + "/awx-projects"]
                                                                         #define the shared path to be persistently added
     end
 
     # This block mounts the postgres file system into your Vagrant path.
     awx.vm.provision "shell", inline: <<-SHELL
-      grep "awx" /etc/fstab || echo "awx-postgres /opt/awx vboxsf _netdev,uid=999,gid=0,dmask=0077,fmask=0177 0 0" >> /etc/fstab
-      mkdir -p /opt/awx
-      chown -R 999:0 /opt/awx
+      grep "awx-postgres" /etc/fstab 2>/dev/null || echo "awx-postgres /opt/awx-postgres vboxsf _netdev,uid=999,gid=0,dmask=0077,fmask=0177 0 0" >> /etc/fstab
+      grep "awx-projects" /etc/fstab 2>/dev/null || echo "awx-projects /opt/awx-projects vboxsf _netdev,uid=999,gid=0,dmask=0077,fmask=0177 0 0" >> /etc/fstab
+      mkdir -p /opt/awx-{postgres,projects}
+      chown -R 999:0 /opt/awx-{postgres,projects}
       mount -a
-      touch /opt/awx/pgdocker-loop
+      touch /opt/awx-postgres/pgdocker-loop
       # Based on https://stackoverflow.com/a/5920355
-      if [ $(wc -c <"/opt/awx/pgdocker-loop") -le 1024 ]; then
+      if [ $(wc -c <"/opt/awx-postgres/pgdocker-loop") -le 1024 ]; then
         # Based on https://invent.life/nesity/create-a-loopback-device-with-ext4/
-        truncate --size 1024M /opt/awx/pgdocker-loop
-        mkfs.ext4 -F /opt/awx/pgdocker-loop
+        truncate --size 1024M /opt/awx-postgres/pgdocker-loop
+        mkfs.ext4 -F /opt/awx-postgres/pgdocker-loop
       fi
-      grep "pgdocker" /etc/fstab || echo "/opt/awx/pgdocker-loop /opt/awx/pgdocker auto loop,_netdev 0 0" >> /etc/fstab
+      grep "pgdocker" /etc/fstab || echo "/opt/awx-postgres/pgdocker-loop /opt/awx-postgres/pgdocker auto loop,_netdev 0 0" >> /etc/fstab
       mkdir -p /opt/awx/pgdocker
       mount -a
     SHELL
@@ -53,7 +55,7 @@ Vagrant.configure("2") do |config|
     awx.vm.provision "ansible_local" do |ansible|
       ansible.verbose = "true"
       ansible.install = "true"
-      ansible.extra_vars = {servers: "awx"} #inject the name of the server we want to apply this ansible config to.
+      ansible.extra_vars = {servers: "awx", postgres_data_dir: "/opt/awx-postgres/pgdocker", project_data_dir: "/opt/awx-projects"}
       ansible.galaxy_role_file = "awx/requirements.yml" #pre-provision any ansible roles before running the main playbook
       ansible.playbook = "awx/site.yml"
     end

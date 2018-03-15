@@ -1,6 +1,4 @@
-# Ansible Role: AWX (open source Ansible Tower)
-
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-awx.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-awx)
+# Ansible Role: AWX (open source Ansible Tower) - Based on the [geerlingguy.ansible-role-awx](https://github.com/geerlingguy/ansible-role-awx) role.
 
 Installs and configures [AWX](https://github.com/ansible/awx), the open source version of [Ansible Tower](https://www.ansible.com/tower).
 
@@ -17,8 +15,6 @@ Before this role runs, assuming you want the role to completely set up AWX using
 | Python Pip                    | `geerlingguy.pip`        |
 | Node.js (6.x)                 | `geerlingguy.nodejs`     |
 
-See this role's `tests/test.yml` playbook for an example that works across many different OSes.
-
 ## Role Variables
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
@@ -27,6 +23,10 @@ Available variables are listed below, along with default values (see `defaults/m
     awx_repo_dir: "~/awx"
     awx_version: devel
     awx_keep_updated: yes
+    postgres_data_dir: (undefined - populate with a path to map the postgres data directory)
+    project_data_dir: (undefined - populate with a path to map the projects data directory)
+    admin_user: admin (not actually defined in this playbook, but in the AWX installer)
+    admin_password: (12 hex characters followed by "_AWX" - may also be replaced by setting the environment variable "AWX_PASSWORD")
 
 Variables to control what version of AWX is checked out and installed.
 
@@ -44,9 +44,7 @@ None.
       become: yes
     
       vars:
-        nodejs_version: "6.x"
-        pip_install_packages:
-          - name: docker-py
+        - postgres_data_dir: /opt/awx-postgres
     
       roles:
         - geerlingguy.repo-epel
@@ -66,3 +64,4 @@ MIT / BSD
 ## Author Information
 
 This role was created in 2017 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+It was amended in 2018 by ["Agent Cormac"](https://github.com/AgentCormac) and [Jon Spriggs](https://jon.sprig.gs) to permit more flexibility in the deployment.
