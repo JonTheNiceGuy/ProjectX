@@ -34,10 +34,11 @@ Vagrant.configure("2") do |config|
 
     # This block mounts the postgres file system into your Vagrant path.
     awx.vm.provision "shell", inline: <<-SHELL
-      grep "awx-postgres" /etc/fstab 2>/dev/null || echo "awx-postgres /opt/awx-postgres vboxsf _netdev,uid=999,gid=0,dmask=0077,fmask=0177 0 0" >> /etc/fstab
-      grep "awx-projects" /etc/fstab 2>/dev/null || echo "awx-projects /opt/awx-projects vboxsf _netdev,uid=999,gid=0,dmask=0077,fmask=0177 0 0" >> /etc/fstab
-      mkdir -p /opt/awx-{postgres,projects}
-      chown -R 999:0 /opt/awx-{postgres,projects}
+      grep "awx-postgres" /etc/fstab >/dev/null || echo "awx-postgres /opt/awx-postgres vboxsf _netdev,uid=0,gid=0,dmask=0077,fmask=0177 0 0" >> /etc/fstab
+      grep "awx-projects" /etc/fstab >/dev/null || echo "awx-projects /opt/awx-projects vboxsf _netdev,uid=0,gid=0,dmask=0077,fmask=0177 0 0" >> /etc/fstab
+      mkdir -p /opt/awx-postgres
+      mkdir -p /opt/awx-projects
+      chown 0:0 /opt/awx-{postgres,projects}
       mount -a
       touch /opt/awx-postgres/pgdocker-loop
       # Based on https://stackoverflow.com/a/5920355
@@ -46,8 +47,8 @@ Vagrant.configure("2") do |config|
         truncate --size 1024M /opt/awx-postgres/pgdocker-loop
         mkfs.ext4 -F /opt/awx-postgres/pgdocker-loop
       fi
-      grep "pgdocker" /etc/fstab || echo "/opt/awx-postgres/pgdocker-loop /opt/awx-postgres/pgdocker auto loop,_netdev 0 0" >> /etc/fstab
-      mkdir -p /opt/awx/pgdocker
+      grep "pgdocker" /etc/fstab >/dev/null || echo "/opt/awx-postgres/pgdocker-loop /opt/awx-postgres/pgdocker auto loop,_netdev 0 0" >> /etc/fstab
+      mkdir -p /opt/awx-postgres/pgdocker
       mount -a
     SHELL
 
@@ -55,7 +56,7 @@ Vagrant.configure("2") do |config|
     awx.vm.provision "ansible_local" do |ansible|
       ansible.verbose = "true"
       ansible.install = "true"
-      ansible.extra_vars = {servers: "awx", postgres_data_dir: "/opt/awx-postgres/pgdocker", project_data_dir: "/opt/awx-projects"}
+      ansible.extra_vars = {servers: "awx", postgres_data_dir: "/opt/awx-postgres/pgdocker", project_data_dir: "/opt/awx-projects", pip_library_changes: [name: "shade", version: "1.13.2"]}
       ansible.galaxy_role_file = "awx/requirements.yml" #pre-provision any ansible roles before running the main playbook
       ansible.playbook = "awx/site.yml"
     end
