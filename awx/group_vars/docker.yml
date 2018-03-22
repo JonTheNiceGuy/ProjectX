@@ -1,0 +1,6 @@
+---
+default_virtualenv: /var/lib/awx/venv/ansible
+extra_pip_packages:
+- name: shade
+  version: 1.13.2
+- name: netaddr

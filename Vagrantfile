@@ -54,11 +54,12 @@ Vagrant.configure("2") do |config|
 
     #Ansible provisioning from playbook that is on the Guest VM
     awx.vm.provision "ansible_local" do |ansible|
-      ansible.verbose = "true"
-      ansible.install = "true"
-      ansible.extra_vars = {servers: "awx", postgres_data_dir: "/opt/awx-postgres/pgdocker", project_data_dir: "/opt/awx-projects", pip_library_changes: [name: "shade", version: "1.13.2"]}
+      ansible.verbose          = "true"
+      ansible.install          = "true"
+      ansible.extra_vars       = {servers: "awx", postgres_data_dir: "/opt/awx-postgres/pgdocker", project_data_dir: "/opt/awx-projects", pip_library_changes: [name: "shade", version: "1.13.2"]}
       ansible.galaxy_role_file = "awx/requirements.yml" #pre-provision any ansible roles before running the main playbook
-      ansible.playbook = "awx/site.yml"
+      ansible.playbook         = "awx/site.yml"
+      ansible.limit            = "all"
     end
   end
 

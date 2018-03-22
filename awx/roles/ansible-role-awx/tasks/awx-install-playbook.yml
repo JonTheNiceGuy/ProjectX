@@ -11,11 +11,6 @@
     path: "{{ project_data_dir }}"
   when: project_data_dir is defined
 
-- name: Define Credentials
-  set_fact:
-    admin_password: "{% if lookup('env', 'AWX_PASSWORD') != '' %}{{ lookup('env', 'AWX_PASSWORD') }}{% else %}{{ awx_password|default(ansible_date_time.epoch|hash('md5')|truncate(12, true, '') + '_AWX') }}{% endif %}"
-    admin_password_Source: "{% if lookup('env', 'AWX_PASSWORD') != '' %}env{% elif awx_password is defined %}config{% else %}random{% endif %}"
-
 # Variables defined by https://github.com/ansible/awx/blob/1.0.4/installer/local_docker/tasks/standalone.yml#L76-L108
 - name: Run the AWX installation playbook.
   command: >
@@ -33,7 +28,3 @@
     path: /etc/awx_playbook_complete
     state: touch
   changed_when: False
-
-- debug:
-    msg:
-      - "AWX Password | Set to      | {{ admin_password }}"
